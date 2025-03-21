@@ -1,16 +1,16 @@
 using UnityEngine;
 
-public class RangedEnemy : MonoBehaviour
+public class RangedEnemy : Enemy
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    //Variables Here
 
-    // Update is called once per frame
-    void Update()
+
+    public override void Start()
     {
-        
+        base.Start();
+    }
+    public override void Update()
+    {
+        base.Update();
     }
 }

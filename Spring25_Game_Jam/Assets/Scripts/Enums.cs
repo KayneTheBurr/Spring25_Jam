@@ -3,7 +3,7 @@ using UnityEngine;
 public class Enums : MonoBehaviour
 {
 }
-public enum PlayerState
+public enum DrugState
 {
     Bouba,
     Kikki,
