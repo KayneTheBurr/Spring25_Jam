@@ -4,7 +4,7 @@ using UnityEngine;
 public class HealthBehavior : MonoBehaviour
 {
     public float maxHealthPoints = 100f;
-    private float currentHealthPoints = 100f;
+    public float currentHealthPoints = 100f; 
     private bool isPlayer = false;
 
     private bool isAlive = true;
