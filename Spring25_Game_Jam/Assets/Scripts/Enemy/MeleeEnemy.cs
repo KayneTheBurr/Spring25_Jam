@@ -3,7 +3,7 @@ using UnityEngine;
 public class MeleeEnemy : Enemy
 {
     //Variables Here
-
+    
 
     public override void Start()
     {
