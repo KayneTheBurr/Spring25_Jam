@@ -14,7 +14,7 @@ public class PlayerInputManager : MonoBehaviour
     public float horz_Amount;
 
     [Header("Attack")]
-    public bool is_attacking;
+    public bool attack_Input;
 
     private void Awake()
     {
@@ -37,6 +37,9 @@ public class PlayerInputManager : MonoBehaviour
             inputManager.Enable();
 
             inputManager.PlayerMovement.Movement.performed += i => move_Input = i.ReadValue<Vector2>();
+
+            inputManager.PlayerActions.Attack.performed += i => attack_Input = true;
+
         }
     }
     private void Update()
@@ -68,6 +71,12 @@ public class PlayerInputManager : MonoBehaviour
     }
     private void HandleAttacking()
     {
-        
+        if (attack_Input)
+        {
+            attack_Input = false;
+
+            player.playerCombatManager.PerformBasicAttack();
+
+        }
     }
 }
