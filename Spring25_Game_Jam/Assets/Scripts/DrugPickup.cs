@@ -3,7 +3,6 @@ using UnityEngine;
 public class DrugPickup : MonoBehaviour
 {
     public string drugName;
-    public DrugState drugState;
     //public WeaponType weaponType;
     public LayerMask playerLayer;
     public AudioClip pickupSound;
@@ -28,7 +27,7 @@ public class DrugPickup : MonoBehaviour
             if (statsManager != null)
             {
                 // For kiki and bouba drug state and switch weapon
-                //statsManager.SwitchDrugState(drugState);
+                //statsManager.SwitchDrugState(DrugState.Bouba);
                 //statsManager.SwitchWeapon(weaponType);
 
                 if (pickupSound != null)
