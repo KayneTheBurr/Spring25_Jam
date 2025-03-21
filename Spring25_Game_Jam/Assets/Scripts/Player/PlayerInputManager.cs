@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerInputManager : MonoBehaviour
 {
     public static PlayerInputManager instance;
+
     InputManager inputManager;
     public PlayerManager player;
 
@@ -13,14 +14,27 @@ public class PlayerInputManager : MonoBehaviour
     public float horz_Amount;
 
     [Header("Attack")]
-    public bool atting;
+    public bool is_attacking;
 
-
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        player = GetComponent<PlayerManager>();
+    }
     private void OnEnable()
     {
         if(inputManager == null)
         {
+            Debug.Log(1);
             inputManager = new InputManager();
+            inputManager.Enable();
 
             inputManager.PlayerMovement.Movement.performed += i => move_Input = i.ReadValue<Vector2>();
         }
