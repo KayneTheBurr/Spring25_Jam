@@ -658,7 +658,7 @@ GameObject:
   - component: {fileID: 580466233}
   - component: {fileID: 580466232}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: CabinetBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -683,7 +683,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.35, y: 1.1, z: 1.1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &580466233
 MeshRenderer:
