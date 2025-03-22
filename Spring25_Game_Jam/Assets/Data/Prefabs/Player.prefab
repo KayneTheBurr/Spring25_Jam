@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3648796675529983121}
   serializedVersion: 2
   m_LocalRotation: {x: 0.30070576, y: 0, z: 0, w: 0.953717}
-  m_LocalPosition: {x: 0, y: 9, z: -13}
+  m_LocalPosition: {x: 0, y: 8, z: -11.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -351,10 +351,12 @@ MonoBehaviour:
   playerCombatManager: {fileID: 0}
   playerAnimationManager: {fileID: 0}
   animator: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   characterController: {fileID: 0}
   canMove: 1
   isPerformingAction: 0
   isDead: 0
+  yAngle: 0
   attackDirection: {fileID: 251381060163111584}
 --- !u!114 &280339478445376572
 MonoBehaviour:
@@ -368,6 +370,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0ef6d9e8c004f4e869df23c565d343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vertMovement: 0
+  horzMovement: 0
+  moveAmount: 0
   lastDirection: {x: 0, y: 0, z: 0}
   moveDirection: {x: 0, y: 0, z: 0}
   gravityMagnitude: 20
@@ -385,8 +390,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e1119a0fc2be447a3a6445226efdfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elapsedTime: 0
-  comboTimer: 0.5
   canCombo: 0
   isChargingAttack: 0
   light_Attack_01: Light_Attack_01
@@ -405,7 +408,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d121e85362b8e6f43af628dc13395b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myDirection: 7
+  lastDirection: 7
   lastAnimation: 
+  front_Bouba_Move: Bouba_Front_Move
+  front_Kiki_Move: Kiki_Front_Move
+  back_Bouba_Move: Bouba_Back_Move
+  back_Kiki_Move: Kiki_Back_Move
+  front_Bouba_Idle: Bouba_Front_Idle
+  front_Kiki_Idle: Kiki_Front_Idle
+  back_Bouba_Idle: Bouba_Back_Idle
+  back_Kiki_Idle: Kiki_Back_Idle
 --- !u!114 &4499006907191684519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -600,7 +613,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 19.64, y: 14.86}
+  m_Size: {x: 4.91, y: 3.715}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

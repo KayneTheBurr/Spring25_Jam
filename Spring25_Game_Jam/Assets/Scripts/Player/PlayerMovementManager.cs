@@ -18,6 +18,10 @@ public class PlayerMovementManager : MonoBehaviour
     {
         player = GetComponent<PlayerManager>();
     }
+    private void Start()
+    {
+        lastDirection = new Vector3(0, 0, -1);
+    }
     private void GetMovementInputs()
     {
         //get values from input manager
