@@ -13,9 +13,19 @@ public class PlayerInputManager : MonoBehaviour
     public float vert_Amount;
     public float horz_Amount;
 
-    [Header("Attack")]
-    public bool attackBasic_Input;
-    public bool attackCharged_Input;
+    [Header("Light Attack")]
+    public bool lightAttack_Input;
+
+    [Header("Heavy Attacks")]
+    public bool charged_HA_Input;
+    public bool heavyAttack_Input;
+
+    [Header("Qued Inputs")]
+    [SerializeField] float que_Input_Timer = 0;
+    [SerializeField] float default_Que_Input_Timer = 0.5f;
+    [SerializeField] bool input_Que_Active = false;
+    [SerializeField] bool qued_LA_Input = false;
+    [SerializeField] bool qued_HA_Input = false;
 
     private void Awake()
     {
@@ -37,9 +47,20 @@ public class PlayerInputManager : MonoBehaviour
             inputManager = new InputManager();
             inputManager.Enable();
 
+            //movement
             inputManager.PlayerMovement.Movement.performed += i => move_Input = i.ReadValue<Vector2>();
 
-            inputManager.PlayerActions.LightAttack.performed += i => attackBasic_Input = true;
+            //Light Attack input
+            inputManager.PlayerActions.LightAttack.performed += i => lightAttack_Input = true;
+
+            //Heavy Attack Inputs
+            inputManager.PlayerActions.HeavyAttack.performed += i => heavyAttack_Input = true;
+            inputManager.PlayerActions.Charged_HA.performed += i => charged_HA_Input = true;
+            inputManager.PlayerActions.HeavyAttack.canceled += i => charged_HA_Input = false;
+
+            //qued inputs
+            inputManager.PlayerActions.Qued_LA.performed += i => QuedInput(ref qued_LA_Input);
+            inputManager.PlayerActions.Qued_HA.performed += i => QuedInput(ref qued_HA_Input);
 
         }
     }
@@ -50,8 +71,9 @@ public class PlayerInputManager : MonoBehaviour
     private void HandleAllInputs()
     {
         HandleMovement();
-        HandleBasicAttack();
-        HandleChargedAttack();
+        HandleLightAttack();
+        HandleHeavyAttack();
+        HandleChargedHeavyAttack();
     }
     private void HandleMovement()
     {
@@ -71,24 +93,68 @@ public class PlayerInputManager : MonoBehaviour
             moveAmount = 1.0f;
         }
     }
-    private void HandleBasicAttack()
+    private void HandleLightAttack()
     {
-        if (attackBasic_Input)
+        if (lightAttack_Input)
         {
-            attackBasic_Input = false;
+            lightAttack_Input = false;
 
             player.playerCombatManager.PerformBasicAttack();
-
         }
     }
-    private void HandleChargedAttack()
+    private void HandleHeavyAttack()
     {
-        if (attackCharged_Input)
+        if (heavyAttack_Input)
         {
-            attackCharged_Input = false;
+            heavyAttack_Input = false;
 
-            player.playerCombatManager.PerformBasicAttack();
-
+            player.playerCombatManager.PerformHeavyAttack();
         }
+    }
+    private void HandleChargedHeavyAttack()
+    {
+        if(player.isPerformingAction)
+        {
+            player.isChargingAttack = charged_HA_Input;
+        }
+    }
+    private void QuedInput(ref bool quedInput)
+    {
+        //only allows queing one attack at a time 
+        qued_HA_Input = false;
+        qued_LA_Input = false;
+
+        if(player.isPerformingAction)
+        {
+            quedInput = true;
+            que_Input_Timer = default_Que_Input_Timer;
+            input_Que_Active = true;
+        }
+    }
+    private void HandleQuedInputs()
+    {
+        if(input_Que_Active)
+        {
+            if(que_Input_Timer > 0)
+            {
+                que_Input_Timer -= Time.deltaTime;
+                ProcessQuedInputs();
+            }
+            else
+            {
+                qued_HA_Input = false;
+                qued_LA_Input = false;
+
+                input_Que_Active = false;
+                que_Input_Timer = 0;
+            }
+        }
+    }
+    private void ProcessQuedInputs()
+    {
+        if (player.isDead) return;
+
+        if (qued_LA_Input) lightAttack_Input = true;
+        if (qued_HA_Input) heavyAttack_Input = true;
     }
 }

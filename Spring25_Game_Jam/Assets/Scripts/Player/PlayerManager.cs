@@ -10,6 +10,8 @@ public class PlayerManager : MonoBehaviour
 
     public bool canMove = true;
     public bool isPerformingAction = false;
+    public bool isChargingAttack = false;
+    public bool isDead = false;
     public Transform attackDirection;
 
     private void Awake()
