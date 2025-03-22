@@ -9,3 +9,14 @@ public enum DrugState
     Kikki,
     None
 }
+public enum FacingDirection
+{
+    FrontLeft,
+    Left, 
+    BackLeft,
+    Back,
+    BackRight,
+    Right,
+    FrontRight,
+    Front
+}
