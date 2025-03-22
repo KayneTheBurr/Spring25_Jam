@@ -6,12 +6,12 @@ public class WorldGameState : MonoBehaviour
     public static event Action worldStateChanged;
     private static DrugState worldState = DrugState.Bouba;
 
-    public DrugState GetWorldState()
+    public static DrugState GetWorldState()
     {
         return worldState;
     }
 
-    public void ChangeWorldState(DrugState drugState)
+    public static void ChangeWorldState(DrugState drugState)
     {
         worldState = drugState;
 

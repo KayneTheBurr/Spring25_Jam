@@ -13,4 +13,9 @@ public class MeleeEnemy : Enemy
     {
         base.Update();
     }
+
+    public override void AttackUpdate()
+    {
+        base.AttackUpdate();
+    }
 }
