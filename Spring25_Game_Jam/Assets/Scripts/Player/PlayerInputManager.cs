@@ -14,7 +14,8 @@ public class PlayerInputManager : MonoBehaviour
     public float horz_Amount;
 
     [Header("Attack")]
-    public bool is_attacking;
+    public bool attackBasic_Input;
+    public bool attackCharged_Input;
 
     private void Awake()
     {
@@ -37,6 +38,9 @@ public class PlayerInputManager : MonoBehaviour
             inputManager.Enable();
 
             inputManager.PlayerMovement.Movement.performed += i => move_Input = i.ReadValue<Vector2>();
+
+            inputManager.PlayerActions.Attack.performed += i => attack_Input = true;
+
         }
     }
     private void Update()
@@ -46,7 +50,8 @@ public class PlayerInputManager : MonoBehaviour
     private void HandleAllInputs()
     {
         HandleMovement();
-        HandleAttacking();
+        HandleBasicAttack();
+        HandleChargedAttack();
     }
     private void HandleMovement()
     {
@@ -66,8 +71,24 @@ public class PlayerInputManager : MonoBehaviour
             moveAmount = 1.0f;
         }
     }
-    private void HandleAttacking()
+    private void HandleBasicAttack()
     {
-        
+        if (attackBasic_Input)
+        {
+            attackBasic_Input = false;
+
+            player.playerCombatManager.PerformBasicAttack();
+
+        }
+    }
+    private void HandleChargedAttack()
+    {
+        if (attackCharged_Input)
+        {
+            attackCharged_Input = false;
+
+            player.playerCombatManager.PerformBasicAttack();
+
+        }
     }
 }
