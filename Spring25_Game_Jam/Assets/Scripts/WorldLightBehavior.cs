@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class WorldLightBehavior : MonoBehaviour
 {
-    private Light light;
+    private Light _light;
     public float boubaLightIntensity = 1f;
     public float kikiLightIntensity = 0.1f;
     
     void Awake()
     {
-        light = GetComponent<Light>();
+        _light = GetComponent<Light>();
 
         OnEnable();
     }
@@ -30,10 +30,10 @@ public class WorldLightBehavior : MonoBehaviour
         switch (worldState)
         {
             case DrugState.Bouba:
-                light.intensity = boubaLightIntensity;
+                _light.intensity = boubaLightIntensity;
                 break;
             case DrugState.Kikki:
-                light.intensity = kikiLightIntensity;
+                _light.intensity = kikiLightIntensity;
                 break;
             default:
                 Debug.Log("No world state, not changing world light.");
