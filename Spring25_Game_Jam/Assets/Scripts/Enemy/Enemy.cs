@@ -50,6 +50,11 @@ public class Enemy : MonoBehaviour
     [Header("Attack State")]
     public float minAttackDistance;
 
+    private void Awake()
+    {
+        OnEnable();
+    }
+
     public virtual void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -100,6 +105,44 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    #region Listeners
+
+    public void OnEnable()
+    {
+        WorldGameState.worldStateChanged += OnGameStateChanged;
+    }
+
+    public void OnDisable()
+    {
+        WorldGameState.worldStateChanged -= OnGameStateChanged;
+    }
+
+    public void OnGameStateChanged()
+    {
+        DrugState gameState = WorldGameState.GetWorldState();
+
+        switch (gameState)
+        {
+            case DrugState.Kikki:
+                if(enemyState == EnemyStates.RUNAWAY)
+                {
+                    SetState(EnemyStates.ALERTED);
+                }
+                break;
+            case DrugState.Bouba:
+                if (enemyState == EnemyStates.FOLLOW)
+                {
+                    SetState(EnemyStates.ALERTED);
+                }
+                break;
+            default:
+                Debug.Log("No world game state, cannot fact check enemy.");
+                break;
+        }
+    }
+
+    #endregion
+
     public void SetState(EnemyStates newEnemyState)
     {
         enemyState = newEnemyState;
@@ -136,6 +179,7 @@ public class Enemy : MonoBehaviour
     IEnumerator AlertEnemy()
     {
         // play alert animation
+        agent.SetDestination(transform.position);
 
         yield return new WaitForSeconds(timeSpentAlert);
 
@@ -144,11 +188,11 @@ public class Enemy : MonoBehaviour
 
         if(WorldGameState.GetWorldState() == DrugState.Kikki)
         {
-            SetState(EnemyStates.RUNAWAY);
+            SetState(EnemyStates.FOLLOW);
         }
         else if(WorldGameState.GetWorldState() == DrugState.Bouba)
         {
-            SetState(EnemyStates.FOLLOW);
+            SetState(EnemyStates.RUNAWAY);
         }
         else
         {
