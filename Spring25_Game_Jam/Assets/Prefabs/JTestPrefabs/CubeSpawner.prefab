@@ -125,5 +125,5 @@ MonoBehaviour:
   canSpawn: 1
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
-  radiusCheck: 5
+    m_Bits: 64
+  radiusCheck: 10
