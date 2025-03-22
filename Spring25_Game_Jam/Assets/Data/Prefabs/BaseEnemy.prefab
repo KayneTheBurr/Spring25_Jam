@@ -125,7 +125,7 @@ MonoBehaviour:
   minPatrolDistance: 5
   maxPatrolDistance: 15
   minDistanceToTarget: 0.1
-  minAttackDistance: 5
+  minAttackDistance: 2
 --- !u!195 &801192108544343688
 NavMeshAgent:
   m_ObjectHideFlags: 0

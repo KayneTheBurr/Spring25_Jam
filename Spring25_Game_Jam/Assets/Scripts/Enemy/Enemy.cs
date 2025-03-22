@@ -122,6 +122,7 @@ public class Enemy : MonoBehaviour
             case EnemyStates.CHARGEUP:
                 break;
             case EnemyStates.ATTACK:
+                SetAttackState();
                 break;
             case EnemyStates.DEAD:
                 Die();
@@ -141,7 +142,19 @@ public class Enemy : MonoBehaviour
         // check if in bouba or kiki
         // set to either follow or runaway
 
-        SetState(EnemyStates.FOLLOW);
+        if(WorldGameState.GetWorldState() == DrugState.Kikki)
+        {
+            SetState(EnemyStates.RUNAWAY);
+        }
+        else if(WorldGameState.GetWorldState() == DrugState.Bouba)
+        {
+            SetState(EnemyStates.FOLLOW);
+        }
+        else
+        {
+            Debug.Log("No world game state.");
+            SetState(EnemyStates.IDLE);
+        }
     }
 
     private bool FindRandomPatrolPointOnNavMesh()
@@ -252,14 +265,32 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public virtual void ChargeUpUpdate()
+    public void ChargeUpUpdate()
     {
+        agent.SetDestination(transform.position);
+        // charge up animation
+    }
 
+    // called from charge up animation
+    public void EndChargeUpState()
+    {
+        SetState(EnemyStates.ATTACK);
     }
 
     public virtual void AttackUpdate()
     {
 
+    }
+
+    public virtual void SetAttackState()
+    {
+        // attack animation
+    }
+
+    // called from attack animation
+    public virtual void EndAttackState()
+    {
+        SetState(EnemyStates.IDLE);
     }
 
     #endregion
