@@ -60,6 +60,9 @@ public class EnemySpawnerManager : MonoBehaviour
 
             // Reset the timer.
             spawnTimer = 0f;
+
+            // Recalculate the spawn rate.
+            spawnInterval = cycleTime / enemiesPerCycle;
         }
     }
 }
