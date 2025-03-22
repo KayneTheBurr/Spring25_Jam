@@ -115,7 +115,7 @@ public class PlayerInputManager : MonoBehaviour
     {
         if(player.isPerformingAction)
         {
-            player.isChargingAttack = charged_HA_Input;
+            player.playerCombatManager.isChargingAttack = charged_HA_Input;
         }
     }
     private void QuedInput(ref bool quedInput)
