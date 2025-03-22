@@ -7,6 +7,8 @@ public class PlayerInputManager : MonoBehaviour
     InputManager inputManager;
     public PlayerManager player;
 
+    public bool isCharging = false;
+
     [Header("Player Movement Values")]
     public Vector2 move_Input;
     public float moveAmount;
@@ -43,7 +45,6 @@ public class PlayerInputManager : MonoBehaviour
     {
         if(inputManager == null)
         {
-            Debug.Log(1);
             inputManager = new InputManager();
             inputManager.Enable();
 
@@ -56,7 +57,7 @@ public class PlayerInputManager : MonoBehaviour
             //Heavy Attack Inputs
             inputManager.PlayerActions.HeavyAttack.performed += i => heavyAttack_Input = true;
             inputManager.PlayerActions.Charged_HA.performed += i => charged_HA_Input = true;
-            inputManager.PlayerActions.HeavyAttack.canceled += i => charged_HA_Input = false;
+            inputManager.PlayerActions.Charged_HA.canceled += i => charged_HA_Input = false;
 
             //qued inputs
             inputManager.PlayerActions.Qued_LA.performed += i => QuedInput(ref qued_LA_Input);
@@ -113,9 +114,21 @@ public class PlayerInputManager : MonoBehaviour
     }
     private void HandleChargedHeavyAttack()
     {
-        if(player.isPerformingAction)
+        
+        if (player.isPerformingAction)
         {
-            player.playerCombatManager.isChargingAttack = charged_HA_Input;
+            if (charged_HA_Input)
+            {
+                isCharging = true;
+            }
+            else
+            {
+                isCharging = false;
+            }
+
+            player.playerCombatManager.isChargingAttack = isCharging;
+
+            //Debug.Log("CHECK CHARGING: " + isCharging); 
         }
     }
     private void QuedInput(ref bool quedInput)
