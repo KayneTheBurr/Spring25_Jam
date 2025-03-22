@@ -24,35 +24,40 @@ public class PlayerAnimationManager : MonoBehaviour
     {
         player = GetComponent<PlayerManager>();
     }
+    public void PlayTargetAnimation(string animationToPlay)
+    {
+        lastAnimation = animationToPlay;
+        Debug.Log(animationToPlay);
+        player.animator.CrossFade(animationToPlay, 0.2f);
+        player.isPerformingAction = true;
+    }
     private void Update()
     {
         HandleFacingDirection();
         HandleDrugState();
+        HandleFrontBackFlipping();
         HandleSpriteFlipping();
         HandleMovementAnimation();
-    }
-    private void HandleDrugState()
-    {
-        if (WorldGameState.GetWorldState() == DrugState.Bouba)
-        {
-            player.animator.SetBool("IsCharging", true);
-        }
-        else
-        {
-            player.animator.SetBool("IsCharging", false);
-        }
     }
     private void HandleFacingDirection()
     {
         lastDirection = myDirection;
         myDirection = player.GetPointerDirection();
     }
-    public void PlayTargetAnimation(string animationToPlay)
+    private void HandleDrugState()
     {
-        lastAnimation = animationToPlay;
+        if (WorldGameState.GetWorldState() == DrugState.Bouba)
+        {
+            player.animator.SetBool("IsBouba", true);
+        }
+        else
+        {
+            player.animator.SetBool("IsBouba", false);
+        }
+    }
+    private void HandleFrontBackFlipping()
+    {
 
-        player.animator.CrossFade(animationToPlay, 0.2f);
-        player.isPerformingAction = true;
     }
     private void HandleSpriteFlipping()
     {
@@ -85,6 +90,8 @@ public class PlayerAnimationManager : MonoBehaviour
     }
     private void HandleMovementAnimation()
     {
+        string animationToPlay = "";
+
         //this is just Bouba, need to copy/paste this for kiki as well 
         if (WorldGameState.GetWorldState() == DrugState.Bouba)
         {
@@ -98,13 +105,13 @@ public class PlayerAnimationManager : MonoBehaviour
                     case FacingDirection.Right:
                     case FacingDirection.FrontLeft:
                     case FacingDirection.FrontRight:
-                        PlayTargetAnimation(front_Bouba_Move);
+                        animationToPlay = front_Bouba_Move;
                         break;
 
                     case FacingDirection.Back:
                     case FacingDirection.BackLeft:
                     case FacingDirection.BackRight:
-                        PlayTargetAnimation(back_Bouba_Move);
+                        animationToPlay = back_Bouba_Move;
                         break;
                 }
             }
@@ -118,15 +125,19 @@ public class PlayerAnimationManager : MonoBehaviour
                     case FacingDirection.Right:
                     case FacingDirection.FrontLeft:
                     case FacingDirection.FrontRight:
-                        PlayTargetAnimation(front_Bouba_Idle);
+                        animationToPlay = front_Bouba_Idle;
                         break;
 
                     case FacingDirection.Back:
                     case FacingDirection.BackLeft:
                     case FacingDirection.BackRight:
-                        PlayTargetAnimation(back_Bouba_Idle);
+                        animationToPlay = back_Bouba_Idle;
                         break;
                 }
+            }
+            if (animationToPlay != lastAnimation)
+            {
+                PlayTargetAnimation(animationToPlay);
             }
         }
         if (WorldGameState.GetWorldState() == DrugState.Kikki)
@@ -141,13 +152,13 @@ public class PlayerAnimationManager : MonoBehaviour
                     case FacingDirection.Right:
                     case FacingDirection.FrontLeft:
                     case FacingDirection.FrontRight:
-                        PlayTargetAnimation(front_Kiki_Move);
+                        animationToPlay = front_Kiki_Move;
                         break;
 
                     case FacingDirection.Back:
                     case FacingDirection.BackLeft:
                     case FacingDirection.BackRight:
-                        PlayTargetAnimation(back_Kiki_Move);
+                        animationToPlay = back_Kiki_Move;
                         break;
                 }
             }
@@ -161,16 +172,20 @@ public class PlayerAnimationManager : MonoBehaviour
                     case FacingDirection.Right:
                     case FacingDirection.FrontLeft:
                     case FacingDirection.FrontRight:
-                        PlayTargetAnimation(front_Kiki_Idle);
+                        animationToPlay = front_Kiki_Idle;
                         break;
 
                     case FacingDirection.Back:
                     case FacingDirection.BackLeft:
                     case FacingDirection.BackRight:
-                        PlayTargetAnimation(back_Kiki_Idle);
+                        animationToPlay = back_Kiki_Idle;
                         break;
                 }
             }
+        }
+        if (animationToPlay != lastAnimation)
+        {
+            PlayTargetAnimation(animationToPlay);
         }
     }
 

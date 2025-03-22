@@ -29,8 +29,21 @@ public class PlayerMovementManager : MonoBehaviour
         horzMovement = PlayerInputManager.instance.horz_Amount;
         moveAmount = PlayerInputManager.instance.moveAmount;
     }
+    private void HandleMovingAnimationBool()
+    {
+        if (isMoving)
+        {
+            player.animator.SetBool("IsMoving", true);
+        }
+        else
+        {
+            player.animator.SetBool("IsMoving", false);
+        }
+    }
     public void AllMovement()
     {
+        HandleMovingAnimationBool();
+
         if (!player.canMove) return;
 
         gravityForce.y = -gravityMagnitude;
@@ -60,11 +73,13 @@ public class PlayerMovementManager : MonoBehaviour
     {
         if(moveDirection.magnitude == 0)
         {
+            isMoving = false;
             player.attackDirection.rotation = Quaternion.LookRotation(lastDirection);
 
         }
         else
         {
+            isMoving = true;
             lastDirection = moveDirection;
             player.attackDirection.rotation = Quaternion.LookRotation(lastDirection);
         }
