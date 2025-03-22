@@ -394,8 +394,8 @@ MonoBehaviour:
   canCombo: 0
   isChargingAttack: 0
   light_Attack_01: Light_Attack_01
-  light_Attack_02: Light_Attack_03
-  light_Attack_03: Light_Attack_02
+  light_Attack_02: Light_Attack_02
+  light_Attack_03: Light_Attack_03
   heavy_Attack_01: Heavy_Attack_01
 --- !u!114 &6704172199978753602
 MonoBehaviour:
@@ -445,6 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  isCharging: 0
   move_Input: {x: 0, y: 0}
   moveAmount: 0
   vert_Amount: 0
@@ -557,6 +558,7 @@ GameObject:
   - component: {fileID: 7808741674549214945}
   - component: {fileID: 2169517437362211468}
   - component: {fileID: 7406110063809648704}
+  - component: {fileID: 5475679789763013350}
   m_Layer: 6
   m_Name: PlayerMesh
   m_TagString: Untagged
@@ -656,3 +658,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5475679789763013350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8919750902924244244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0e27e8cb4a95cd45ab9586a06c3abfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

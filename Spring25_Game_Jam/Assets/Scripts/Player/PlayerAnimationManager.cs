@@ -1,8 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAnimationManager : MonoBehaviour
 {
     PlayerManager player;
+
+    
 
     public FacingDirection myDirection = FacingDirection.Front;
     public FacingDirection lastDirection = FacingDirection.Front;
@@ -24,12 +27,12 @@ public class PlayerAnimationManager : MonoBehaviour
     {
         player = GetComponent<PlayerManager>();
     }
-    public void PlayTargetAnimation(string animationToPlay)
+    public void PlayTargetAnimation(string animationToPlay, bool isPerforming)
     {
         lastAnimation = animationToPlay;
-        Debug.Log(animationToPlay);
+        //Debug.Log(animationToPlay);
         player.animator.CrossFade(animationToPlay, 0.2f);
-        player.isPerformingAction = true;
+        player.isPerformingAction = isPerforming;
     }
     private void Update()
     {
@@ -90,6 +93,8 @@ public class PlayerAnimationManager : MonoBehaviour
     }
     private void HandleMovementAnimation()
     {
+        if (player.isPerformingAction) return;
+
         string animationToPlay = "";
 
         //this is just Bouba, need to copy/paste this for kiki as well 
@@ -137,7 +142,7 @@ public class PlayerAnimationManager : MonoBehaviour
             }
             if (animationToPlay != lastAnimation)
             {
-                PlayTargetAnimation(animationToPlay);
+                PlayTargetAnimation(animationToPlay, false);
             }
         }
         if (WorldGameState.GetWorldState() == DrugState.Kikki)
@@ -185,7 +190,7 @@ public class PlayerAnimationManager : MonoBehaviour
         }
         if (animationToPlay != lastAnimation)
         {
-            PlayTargetAnimation(animationToPlay);
+            PlayTargetAnimation(animationToPlay, false);
         }
     }
 
