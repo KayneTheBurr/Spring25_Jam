@@ -16,6 +16,6 @@ public class KikiSpriteSwitch : MonoBehaviour
     private void UpdateVisibility()
     {
         // Enable only if the current world state is Kiki
-        gameObject.SetActive(WorldGameState.GetWorldState() == DrugState.Kiki);
+        gameObject.SetActive(WorldGameState.GetWorldState() == DrugState.Kikki);
     }
 }
