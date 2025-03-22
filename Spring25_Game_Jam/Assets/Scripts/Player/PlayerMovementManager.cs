@@ -53,7 +53,6 @@ public class PlayerMovementManager : MonoBehaviour
     {
         if(moveDirection.magnitude == 0)
         {
-            
             player.attackDirection.rotation = Quaternion.LookRotation(lastDirection);
         }
         else
