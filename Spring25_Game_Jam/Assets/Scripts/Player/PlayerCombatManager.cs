@@ -10,4 +10,16 @@ public class PlayerCombatManager : MonoBehaviour
     {
 
     }
+    public void PerformHeavyAttack()
+    {
+
+    }
+    public void EnableCanCombo()
+    {
+
+    }
+    public void DisableCanCombo()
+    {
+
+    }
 }
