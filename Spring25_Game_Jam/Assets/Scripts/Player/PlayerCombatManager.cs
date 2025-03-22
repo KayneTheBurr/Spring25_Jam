@@ -4,8 +4,6 @@ public class PlayerCombatManager : MonoBehaviour
 {
     PlayerManager player;
 
-    public float elapsedTime = 0f;
-    public float comboTimer = 0.5f;
     public bool canCombo = false;
 
     public bool isChargingAttack = false;
@@ -22,10 +20,7 @@ public class PlayerCombatManager : MonoBehaviour
     }
     private void Update()
     {
-        elapsedTime += Time.deltaTime;
-
-
-
+        HandleChargingAttack();
     }
     public void PerformBasicAttack()
     {
@@ -36,25 +31,49 @@ public class PlayerCombatManager : MonoBehaviour
 
             if (player.playerAnimationManager.lastAnimation == light_Attack_01)
             {
+                Debug.Log("Play second attack here");
                 player.playerAnimationManager.PlayTargetAnimation(light_Attack_02);
             }
             else if (player.playerAnimationManager.lastAnimation == light_Attack_02)
             {
+                Debug.Log("Play third attack here");
                 player.playerAnimationManager.PlayTargetAnimation(light_Attack_03);
             }
             else if(player.playerAnimationManager.lastAnimation == light_Attack_03)
             {
+                Debug.Log("Play first attack here");
                 player.playerAnimationManager.PlayTargetAnimation(light_Attack_01);
             }
         }
         else if(!player.isPerformingAction)
         {
+            Debug.Log("Play first attack here");
             player.playerAnimationManager.PlayTargetAnimation(light_Attack_01);
+        }
+
+        player.isPerformingAction = true;
+
+    }
+    private void HandleChargingAttack()
+    {
+        if(isChargingAttack)
+        {
+            player.animator.SetBool("IsCharging", true);
+        }
+        else
+        {
+            player.animator.SetBool("IsCharging", false);
         }
     }
     public void PerformHeavyAttack()
     {
+        if (!player.isPerformingAction)
+        {
+            Debug.Log("Play heavy attack");
+            player.playerAnimationManager.PlayTargetAnimation(heavy_Attack_01);
 
+            player.isPerformingAction = true;
+        }
     }
     public void EnableCanCombo()
     {
@@ -63,9 +82,5 @@ public class PlayerCombatManager : MonoBehaviour
     public void DisableCanCombo()
     {
         canCombo &= false;
-    }
-    public void ResetTimer()
-    {
-        elapsedTime = 0f;
     }
 }

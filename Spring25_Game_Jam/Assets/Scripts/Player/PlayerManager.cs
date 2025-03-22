@@ -10,10 +10,12 @@ public class PlayerManager : MonoBehaviour
     [HideInInspector] public Animator animator;
     [HideInInspector] public CharacterController characterController;
 
+    [Header("Flags")]
     public bool canMove = true;
     public bool isPerformingAction = false;
-    
     public bool isDead = false;
+    
+
     public Transform attackDirection;
 
     private void Awake()
@@ -26,7 +28,8 @@ public class PlayerManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        animator = GetComponent<Animator>();
+
+        animator = GetComponentInChildren<Animator>();
         characterController = GetComponent<CharacterController>();
         playerMovementManager = GetComponent<PlayerMovementManager>();
         playerCombatManager = GetComponent<PlayerCombatManager>();
@@ -36,5 +39,8 @@ public class PlayerManager : MonoBehaviour
     {
         playerMovementManager.AllMovement();
     }
-
+    public float GetPointerDirection()
+    {
+        return attackDirection.rotation.eulerAngles.y;
+    }
 }
