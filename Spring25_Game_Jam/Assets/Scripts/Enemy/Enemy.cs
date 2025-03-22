@@ -269,6 +269,9 @@ public class Enemy : MonoBehaviour
     {
         agent.SetDestination(transform.position);
         // charge up animation
+
+        //temp
+        EndChargeUpState();
     }
 
     // called from charge up animation
@@ -285,10 +288,13 @@ public class Enemy : MonoBehaviour
     public virtual void SetAttackState()
     {
         // attack animation
+
+        //temp
+        EndAttackState();
     }
 
     // called from attack animation
-    public virtual void EndAttackState()
+    public void EndAttackState()
     {
         SetState(EnemyStates.IDLE);
     }

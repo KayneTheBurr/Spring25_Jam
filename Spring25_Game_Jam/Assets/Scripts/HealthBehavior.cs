@@ -31,12 +31,36 @@ public class HealthBehavior : MonoBehaviour
                 TakeDMG(col.gameObject.GetComponent<Enemy>().dmgFromHitbox);
                 return;
             }
-
-            // look for enemy attack colliders
         }
         else
         {
             // look for player attack colliders
+
+        }
+    }
+
+    private void OnTriggerEnter(Collider col)
+    {
+        if (!isAlive) { return; }
+
+        if (isPlayer)
+        {
+            // look for enemy attack colliders
+            if (col.gameObject.GetComponent<EnemyWeaponBehavior>() != null)
+            {
+                TakeDMG(col.gameObject.GetComponent<EnemyWeaponBehavior>().damage);
+                
+                if(col.gameObject.GetComponent<Bullet>() != null)
+                {
+                    col.gameObject.GetComponent<Bullet>().HitSomething();
+                }
+
+                return;
+            }
+        }
+        else
+        {
+
         }
     }
 
