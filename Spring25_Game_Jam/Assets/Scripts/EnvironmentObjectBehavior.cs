@@ -7,7 +7,9 @@ public class EnvironmentObjectBehavior : MonoBehaviour
     public Sprite boubaSprite;
     public Sprite kikiSprite;
 
-    void Start()
+    public GameObject kikiMoodLight;
+
+    void Awake()
     {
         sp = GetComponent<SpriteRenderer>();
         OnEnable();
@@ -28,10 +30,18 @@ public class EnvironmentObjectBehavior : MonoBehaviour
         if(WorldGameState.GetWorldState() == DrugState.Bouba)
         {
             sp.sprite = boubaSprite;
+            if(kikiMoodLight != null)
+            {
+                kikiMoodLight.SetActive(false);
+            }
         }
         else if(WorldGameState.GetWorldState() == DrugState.Kikki)
         {
             sp.sprite = kikiSprite;
+            if (kikiMoodLight != null)
+            {
+                kikiMoodLight.SetActive(true);
+            }
         }
         else
         {
