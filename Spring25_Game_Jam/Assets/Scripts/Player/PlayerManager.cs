@@ -6,11 +6,13 @@ public class PlayerManager : MonoBehaviour
 
     [HideInInspector] public PlayerMovementManager playerMovementManager;
     [HideInInspector] public PlayerCombatManager playerCombatManager;
+    [HideInInspector] public PlayerAnimationManager playerAnimationManager;
+    [HideInInspector] public Animator animator;
     [HideInInspector] public CharacterController characterController;
 
     public bool canMove = true;
     public bool isPerformingAction = false;
-    public bool isChargingAttack = false;
+    
     public bool isDead = false;
     public Transform attackDirection;
 
@@ -24,10 +26,11 @@ public class PlayerManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
+        animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
         playerMovementManager = GetComponent<PlayerMovementManager>();
         playerCombatManager = GetComponent<PlayerCombatManager>();
+        playerAnimationManager = GetComponent<PlayerAnimationManager>();
     }
     private void Update()
     {
