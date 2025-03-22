@@ -458,6 +458,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_BoubaKill
       objectReference: {fileID: 0}
+    - target: {fileID: 1369235664060011158, guid: 50473953a379e85428394aebee1e8ef5, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369235664060011158, guid: 50473953a379e85428394aebee1e8ef5, type: 3}
+      propertyPath: stopAction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3347529444875272062, guid: 50473953a379e85428394aebee1e8ef5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
