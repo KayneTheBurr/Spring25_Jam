@@ -13,9 +13,18 @@ public class PlayerInputManager : MonoBehaviour
     public float vert_Amount;
     public float horz_Amount;
 
-    [Header("Attack")]
-    public bool attackBasic_Input;
-    public bool attackCharged_Input;
+    [Header("Light Attack")]
+    public bool lightAttack_Input;
+
+    [Header("Heavy Attacks")]
+    public bool charged_HA_Input;
+
+    [Header("Qued Inputs")]
+    [SerializeField] float que_Input_Timer = 0;
+    [SerializeField] float default_Que_Input_Timer = 0.5f;
+    [SerializeField] bool input_Que_Active = false;
+    [SerializeField] bool qued_LA_Input = false;
+    [SerializeField] bool qued_HA_input = false;
 
     private void Awake()
     {
@@ -37,9 +46,22 @@ public class PlayerInputManager : MonoBehaviour
             inputManager = new InputManager();
             inputManager.Enable();
 
+            //movement
             inputManager.PlayerMovement.Movement.performed += i => move_Input = i.ReadValue<Vector2>();
 
-            inputManager.PlayerActions.LightAttack.performed += i => attackBasic_Input = true;
+            //Light Attack input
+            inputManager.PlayerActions.LightAttack.performed += i => lightAttack_Input = true;
+
+            //Heavy Attack Inputs
+            inputManager.PlayerActions.HeavyAttack.performed += i => lightAttack_Input = true;
+            inputManager.PlayerActions.Charged_HA.performed += i => lightAttack_Input = true;
+            inputManager.PlayerActions.HeavyAttack.performed += i => lightAttack_Input = true;
+
+            //qued inputs
+            inputManager.PlayerActions.Qued_LA.performed += i => lightAttack_Input = true;
+            inputManager.PlayerActions.Qued_HA.performed += i => lightAttack_Input = true;
+
+
 
         }
     }
@@ -73,9 +95,9 @@ public class PlayerInputManager : MonoBehaviour
     }
     private void HandleBasicAttack()
     {
-        if (attackBasic_Input)
+        if (lightAttack_Input)
         {
-            attackBasic_Input = false;
+            lightAttack_Input = false;
 
             player.playerCombatManager.PerformBasicAttack();
 
@@ -83,9 +105,9 @@ public class PlayerInputManager : MonoBehaviour
     }
     private void HandleChargedAttack()
     {
-        if (attackCharged_Input)
+        if (charged_HA_Input)
         {
-            attackCharged_Input = false;
+            charged_HA_Input = false;
 
             player.playerCombatManager.PerformBasicAttack();
 
