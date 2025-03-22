@@ -28,6 +28,7 @@ public class DrugPickup : MonoBehaviour
             {
                 // For kiki and bouba drug state and switch weapon
                 //statsManager.SwitchDrugState(DrugState.Bouba);
+                WorldGameState.ChangeWorldState(DrugState.Bouba);
                 //statsManager.SwitchWeapon(weaponType);
 
                 if (pickupSound != null)
