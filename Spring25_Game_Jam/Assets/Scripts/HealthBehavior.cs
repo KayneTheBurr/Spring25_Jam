@@ -19,13 +19,19 @@ public class HealthBehavior : MonoBehaviour
         currentHealthPoints = maxHealthPoints;
     }
 
-    void OnCollisionEnter()
+    void OnCollisionEnter(Collision col)
     {
         if (!isAlive) { return; }
 
         if (isPlayer)
         {
             // look for enemy colliders
+            if (col.gameObject.GetComponent<Enemy>() != null)
+            {
+                TakeDMG(col.gameObject.GetComponent<Enemy>().dmgFromHitbox);
+                return;
+            }
+
             // look for enemy attack colliders
         }
         else

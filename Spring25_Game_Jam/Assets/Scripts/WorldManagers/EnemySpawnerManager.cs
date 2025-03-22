@@ -22,7 +22,7 @@ public class EnemySpawnerManager : MonoBehaviour
     {
         // Calculate the interval between enemy spawns.
         spawnInterval = cycleTime / enemiesPerCycle;
-        spawners = new List<EnemySpawner>(FindObjectsOfType<EnemySpawner>());
+        spawners = new List<EnemySpawner>(FindObjectsByType<EnemySpawner>(FindObjectsSortMode.None));
     }
 
     void Update()
@@ -60,6 +60,9 @@ public class EnemySpawnerManager : MonoBehaviour
 
             // Reset the timer.
             spawnTimer = 0f;
+
+            // Recalculate the spawn rate.
+            spawnInterval = cycleTime / enemiesPerCycle;
         }
     }
 }
