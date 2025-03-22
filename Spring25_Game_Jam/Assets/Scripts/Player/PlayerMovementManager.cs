@@ -6,8 +6,11 @@ public class PlayerMovementManager : MonoBehaviour
     PlayerManager player; 
     private float vertMovement, horzMovement, moveAmount;
 
-    private Vector3 moveDirection;
+    public Vector3 lastDirection;
 
+    public Vector3 moveDirection;
+    public float gravityMagnitude = 20;
+    private Vector3 gravityForce;
     public float moveSpeed;
 
     private void Awake()
@@ -22,11 +25,11 @@ public class PlayerMovementManager : MonoBehaviour
     }
     public void AllMovement()
     {
-        if(player.canMove)
-        {
-            GetMovementInputs();
-        }
         if (!player.canMove) return;
+
+        gravityForce.y = -gravityMagnitude;
+
+        GetMovementInputs();
 
         //determine which direction to move here
         moveDirection = player.transform.forward * vertMovement;
@@ -43,6 +46,21 @@ public class PlayerMovementManager : MonoBehaviour
             player.characterController.Move(moveDirection * moveSpeed / 2 * Time.deltaTime);
         }
 
+        player.characterController.Move(gravityForce * Time.deltaTime);
+        HandleRotation(moveDirection);
+    }
+    private void HandleRotation(Vector3 moveDirection)
+    {
+        if(moveDirection.magnitude == 0)
+        {
+            
+            player.attackDirection.rotation = Quaternion.LookRotation(lastDirection);
+        }
+        else
+        {
+            lastDirection = moveDirection;
+            player.attackDirection.rotation = Quaternion.LookRotation(lastDirection);
+        }
 
     }
 }
