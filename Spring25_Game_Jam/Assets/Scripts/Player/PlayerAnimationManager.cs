@@ -27,8 +27,20 @@ public class PlayerAnimationManager : MonoBehaviour
     private void Update()
     {
         HandleFacingDirection();
+        HandleDrugState();
         HandleSpriteFlipping();
         HandleMovementAnimation();
+    }
+    private void HandleDrugState()
+    {
+        if (WorldGameState.GetWorldState() == DrugState.Bouba)
+        {
+            player.animator.SetBool("IsCharging", true);
+        }
+        else
+        {
+            player.animator.SetBool("IsCharging", false);
+        }
     }
     private void HandleFacingDirection()
     {
@@ -74,45 +86,90 @@ public class PlayerAnimationManager : MonoBehaviour
     private void HandleMovementAnimation()
     {
         //this is just Bouba, need to copy/paste this for kiki as well 
-
-        //if the player is moving do this 
-        if (player.playerMovementManager.moveAmount > 0)
+        if (WorldGameState.GetWorldState() == DrugState.Bouba)
         {
-            switch (myDirection)
+            //if the player is moving do this 
+            if (player.playerMovementManager.moveAmount > 0)
             {
-                case FacingDirection.Front:
-                case FacingDirection.Left:
-                case FacingDirection.Right:
-                case FacingDirection.FrontLeft:
-                case FacingDirection.FrontRight:
-                    PlayTargetAnimation(front_Bouba_Move);
-                    break;
+                switch (myDirection)
+                {
+                    case FacingDirection.Front:
+                    case FacingDirection.Left:
+                    case FacingDirection.Right:
+                    case FacingDirection.FrontLeft:
+                    case FacingDirection.FrontRight:
+                        PlayTargetAnimation(front_Bouba_Move);
+                        break;
 
-                case FacingDirection.Back:
-                case FacingDirection.BackLeft:
-                case FacingDirection.BackRight:
-                    PlayTargetAnimation(back_Bouba_Move);
-                    break;
+                    case FacingDirection.Back:
+                    case FacingDirection.BackLeft:
+                    case FacingDirection.BackRight:
+                        PlayTargetAnimation(back_Bouba_Move);
+                        break;
+                }
+            }
+            //the player isnt moving, so figure out what idle to play
+            else
+            {
+                switch (myDirection)
+                {
+                    case FacingDirection.Front:
+                    case FacingDirection.Left:
+                    case FacingDirection.Right:
+                    case FacingDirection.FrontLeft:
+                    case FacingDirection.FrontRight:
+                        PlayTargetAnimation(front_Bouba_Idle);
+                        break;
+
+                    case FacingDirection.Back:
+                    case FacingDirection.BackLeft:
+                    case FacingDirection.BackRight:
+                        PlayTargetAnimation(back_Bouba_Idle);
+                        break;
+                }
             }
         }
-        //the player isnt moving, so figure out what idle to play
-        else
+        if (WorldGameState.GetWorldState() == DrugState.Kikki)
         {
-            switch (myDirection)
+            //if the player is moving do this 
+            if (player.playerMovementManager.moveAmount > 0)
             {
-                case FacingDirection.Front:
-                case FacingDirection.Left:
-                case FacingDirection.Right:
-                case FacingDirection.FrontLeft:
-                case FacingDirection.FrontRight:
-                    PlayTargetAnimation(front_Bouba_Idle);
-                    break;
+                switch (myDirection)
+                {
+                    case FacingDirection.Front:
+                    case FacingDirection.Left:
+                    case FacingDirection.Right:
+                    case FacingDirection.FrontLeft:
+                    case FacingDirection.FrontRight:
+                        PlayTargetAnimation(front_Kiki_Move);
+                        break;
 
-                case FacingDirection.Back:
-                case FacingDirection.BackLeft:
-                case FacingDirection.BackRight:
-                    PlayTargetAnimation(back_Bouba_Idle);
-                    break;
+                    case FacingDirection.Back:
+                    case FacingDirection.BackLeft:
+                    case FacingDirection.BackRight:
+                        PlayTargetAnimation(back_Kiki_Move);
+                        break;
+                }
+            }
+            //the player isnt moving, so figure out what idle to play
+            else
+            {
+                switch (myDirection)
+                {
+                    case FacingDirection.Front:
+                    case FacingDirection.Left:
+                    case FacingDirection.Right:
+                    case FacingDirection.FrontLeft:
+                    case FacingDirection.FrontRight:
+                        PlayTargetAnimation(front_Kiki_Idle);
+                        break;
+
+                    case FacingDirection.Back:
+                    case FacingDirection.BackLeft:
+                    case FacingDirection.BackRight:
+                        PlayTargetAnimation(back_Kiki_Idle);
+                        break;
+                }
             }
         }
     }
