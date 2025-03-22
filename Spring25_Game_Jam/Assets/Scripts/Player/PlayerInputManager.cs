@@ -39,7 +39,7 @@ public class PlayerInputManager : MonoBehaviour
 
             inputManager.PlayerMovement.Movement.performed += i => move_Input = i.ReadValue<Vector2>();
 
-            inputManager.PlayerActions.Attack.performed += i => attackBasic_Input = true;
+            inputManager.PlayerActions.LightAttack.performed += i => attackBasic_Input = true;
 
         }
     }
