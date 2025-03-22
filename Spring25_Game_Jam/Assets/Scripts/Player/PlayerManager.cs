@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    public static PlayerManager instance;
+
     [HideInInspector] public PlayerMovementManager playerMovementManager;
     [HideInInspector] public PlayerCombatManager playerCombatManager;
     [HideInInspector] public CharacterController characterController;
@@ -12,6 +14,15 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake()
     {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         characterController = GetComponent<CharacterController>();
         playerMovementManager = GetComponent<PlayerMovementManager>();
         playerCombatManager = GetComponent<PlayerCombatManager>();
