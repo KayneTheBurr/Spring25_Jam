@@ -34,7 +34,7 @@ public class DrugSpawnManager : MonoBehaviour
     void OnWorldStateChanged()
     {
         // Check if the new world state is Kikki.
-        if (WorldGameState.GetWorldState() == DrugState.Kikki)
+        if (WorldGameState.instance.GetWorldState() == DrugState.Kikki)
         {
             SpawnDrugs();
         }

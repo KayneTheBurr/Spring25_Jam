@@ -10,7 +10,7 @@ public class WorldLightBehavior : MonoBehaviour
     {
         _light = GetComponent<Light>();
 
-        OnEnable();
+        //OnEnable();
     }
 
     public void OnEnable()
@@ -27,15 +27,22 @@ public class WorldLightBehavior : MonoBehaviour
 
     public void OnGameStateChange()
     {
-        DrugState worldState = WorldGameState.GetWorldState();
+        DrugState worldState = WorldGameState.instance.GetWorldState();
 
         switch (worldState)
         {
             case DrugState.Bouba:
-                _light.intensity = boubaLightIntensity;
+                if(_light != null)
+                {
+                    _light.intensity = boubaLightIntensity;
+                }
+                
                 break;
             case DrugState.Kikki:
-                _light.intensity = kikiLightIntensity;
+                if (_light != null)
+                {
+                    _light.intensity = kikiLightIntensity;
+                }
                 break;
             default:
                 Debug.Log("No world state, not changing world light.");

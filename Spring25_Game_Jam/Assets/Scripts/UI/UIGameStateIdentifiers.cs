@@ -10,7 +10,7 @@ public class UIGameStateIdentifiers : MonoBehaviour
     private void Awake()
     {
         icon = GetComponent<Image>();
-        OnEnable();
+        //OnEnable();
     }
 
     public void OnEnable()
@@ -27,7 +27,7 @@ public class UIGameStateIdentifiers : MonoBehaviour
 
     public void OnWorldStateChange()
     {
-        DrugState worldState = WorldGameState.GetWorldState();
+        DrugState worldState = WorldGameState.instance.GetWorldState();
 
         switch (worldState)
         {
@@ -45,11 +45,19 @@ public class UIGameStateIdentifiers : MonoBehaviour
 
     private void SetBoubaUI()
     {
-        icon.sprite = boubaSprite;
+        if(icon != null)
+        {
+            icon.sprite = boubaSprite;
+        }
+        
     }
 
     private void SetKikkiUI()
     {
-        icon.sprite = kikiSprite;
+        if(icon != null)
+        {
+            icon.sprite = kikiSprite;
+        }
+       
     }
 }

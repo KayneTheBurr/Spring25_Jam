@@ -9,13 +9,13 @@ public class FireState : MonoBehaviour
     void Update()
     {
         //kiki (on)
-        if (WorldGameState.GetWorldState() == DrugState.Kikki)
+        if (WorldGameState.instance.GetWorldState() == DrugState.Kikki)
         {
             back.SetActive(true);
             front.SetActive(true);
         }
         //bouba (off)
-        else if (WorldGameState.GetWorldState() == DrugState.Bouba)
+        else if (WorldGameState.instance.GetWorldState() == DrugState.Bouba)
         {
             back.SetActive(false);
             front.SetActive(false);

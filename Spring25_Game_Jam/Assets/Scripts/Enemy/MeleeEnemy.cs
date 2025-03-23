@@ -24,7 +24,7 @@ public class MeleeEnemy : Enemy
     {
         spriteAnim.SetTrigger("attack");
 
-        DrugState worldState = WorldGameState.GetWorldState();
+        DrugState worldState = WorldGameState.instance.GetWorldState();
         if (worldState == DrugState.Bouba) { SFXManager.instance.PlayBearHitSound(); }
         else
         {

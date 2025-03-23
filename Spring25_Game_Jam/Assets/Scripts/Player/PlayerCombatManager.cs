@@ -49,12 +49,12 @@ public class PlayerCombatManager : MonoBehaviour
     }
     public void TakeDamage()
     {
-        if (WorldGameState.GetWorldState() == DrugState.Kikki)
+        if (WorldGameState.instance.GetWorldState() == DrugState.Kikki)
         {
             ParticleManager.instance.spawnParticles(ParticleManager.instance.particles[2],
                 transform.position, Quaternion.identity, player.transform);
         }
-        else if (WorldGameState.GetWorldState() == DrugState.Bouba)
+        else if (WorldGameState.instance.GetWorldState() == DrugState.Bouba)
         {
             ParticleManager.instance.spawnParticles(ParticleManager.instance.particles[1],
                 transform.position, Quaternion.identity, player.transform);
@@ -192,7 +192,7 @@ public class PlayerCombatManager : MonoBehaviour
     public void PerformBasicAttack()
     {
         //cant attack in kiki mode 
-        if (WorldGameState.GetWorldState() == DrugState.Kikki) return;
+        if (WorldGameState.instance.GetWorldState() == DrugState.Kikki) return;
         bool facingFront = true;
         
         switch (player.playerAnimationManager.myDirection)
@@ -301,7 +301,7 @@ public class PlayerCombatManager : MonoBehaviour
     public void PerformHeavyAttack()
     {
         //cant attack in kiki mode 
-        if (WorldGameState.GetWorldState() == DrugState.Kikki) return;
+        if (WorldGameState.instance.GetWorldState() == DrugState.Kikki) return;
 
         bool facingFront = true;
         

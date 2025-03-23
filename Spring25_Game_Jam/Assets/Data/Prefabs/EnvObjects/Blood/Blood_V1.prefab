@@ -132,6 +132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9a93dd59e3d1be4e886a6b4bee162c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boubaSprite: {fileID: 0}
+  boubaSprite: {fileID: 21300000, guid: 6a6d62c89044d6e4f8d2e930c7c02896, type: 3}
   kikiSprite: {fileID: 21300000, guid: 3c0a34d2e9332cd43a6b9a4d7efad80c, type: 3}
   kikiMoodLight: {fileID: 0}

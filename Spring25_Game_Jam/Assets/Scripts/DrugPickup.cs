@@ -12,7 +12,7 @@ public class DrugPickup : MonoBehaviour
 
     void Awake()
     {
-        OnEnable();
+        //OnEnable();
     }
 
     private void Start()
@@ -58,7 +58,7 @@ public class DrugPickup : MonoBehaviour
 
     public void OnWorldStateChanged()
     {
-        if(WorldGameState.GetWorldState() == DrugState.Bouba)
+        if(WorldGameState.instance.GetWorldState() == DrugState.Bouba)
         {
             OnDisable();
             Destroy(gameObject);

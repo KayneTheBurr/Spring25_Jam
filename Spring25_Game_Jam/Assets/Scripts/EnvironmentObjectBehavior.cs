@@ -14,12 +14,17 @@ public class EnvironmentObjectBehavior : MonoBehaviour
     {
         sp = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        OnEnable();
+        //OnEnable();
+        
+    }
+    private void Start()
+    {
         ChangeSprite();
     }
 
     public void OnEnable()
     {
+        
         WorldGameState.worldStateChanged += ChangeSprite;
         SceneChangeHandler.onSceneChange += OnDisable;
     }
@@ -32,9 +37,12 @@ public class EnvironmentObjectBehavior : MonoBehaviour
 
     public void ChangeSprite()
     {
-        if(WorldGameState.GetWorldState() == DrugState.Bouba)
+        if(WorldGameState.instance.GetWorldState() == DrugState.Bouba)
         {
-            sp.sprite = boubaSprite;
+            if(sp != null)
+            {
+                sp.sprite = boubaSprite;
+            }
 
             if(anim != null)
             {
@@ -46,9 +54,13 @@ public class EnvironmentObjectBehavior : MonoBehaviour
                 kikiMoodLight.SetActive(false);
             }
         }
-        else if(WorldGameState.GetWorldState() == DrugState.Kikki)
+        else if(WorldGameState.instance.GetWorldState() == DrugState.Kikki)
         {
-            sp.sprite = kikiSprite;
+            if(sp != null)
+            {
+                sp.sprite = kikiSprite;
+            }
+            
 
             if (anim != null)
             {

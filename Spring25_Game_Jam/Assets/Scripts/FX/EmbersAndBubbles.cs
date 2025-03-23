@@ -8,7 +8,7 @@ public class EmbersAndBubbles : MonoBehaviour
     void Update()
     {
         //kiki
-        if (WorldGameState.GetWorldState() == DrugState.Kikki)
+        if (WorldGameState.instance.GetWorldState() == DrugState.Kikki)
         {
             if (bubbles.isPlaying)
             {
@@ -21,7 +21,7 @@ public class EmbersAndBubbles : MonoBehaviour
             }
         }
         //bouba
-        else if (WorldGameState.GetWorldState() == DrugState.Bouba)
+        else if (WorldGameState.instance.GetWorldState() == DrugState.Bouba)
         {
             if (embers.isPlaying)
             {

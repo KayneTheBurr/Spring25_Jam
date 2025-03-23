@@ -57,7 +57,7 @@ public class WorldGameState : MonoBehaviour
             }
         }
     }
-    public static DrugState GetWorldState()
+    public DrugState GetWorldState()
     {
         return worldState;
     }

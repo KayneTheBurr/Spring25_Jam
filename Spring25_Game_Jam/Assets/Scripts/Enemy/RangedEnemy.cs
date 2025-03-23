@@ -26,7 +26,7 @@ public class RangedEnemy : Enemy
         GameObject newBullet = Instantiate(bulletPrefab);
         newBullet.transform.position = rangedWeaponTransform.position;
 
-        DrugState worldState = WorldGameState.GetWorldState();
+        DrugState worldState = WorldGameState.instance.GetWorldState();
         if(worldState == DrugState.Bouba) { SFXManager.instance.PlayBubbleShootSound(); }
         else
         {

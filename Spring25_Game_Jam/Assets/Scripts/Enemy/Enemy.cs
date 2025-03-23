@@ -71,7 +71,7 @@ public class Enemy : MonoBehaviour
 
         agent = GetComponent<NavMeshAgent>();
 
-        OnEnable();
+        //OnEnable();
     }
 
     public virtual void Start()
@@ -143,7 +143,7 @@ public class Enemy : MonoBehaviour
 
     public void OnGameStateChanged()
     {
-        DrugState gameState = WorldGameState.GetWorldState();
+        DrugState gameState = WorldGameState.instance.GetWorldState();
 
         switch (gameState)
         {
@@ -233,7 +233,7 @@ public class Enemy : MonoBehaviour
         // check if in bouba or kiki
         // set to either follow or runaway
 
-        DrugState worldState = WorldGameState.GetWorldState();
+        DrugState worldState = WorldGameState.instance.GetWorldState();
 
         switch (worldState)
         {

@@ -25,7 +25,7 @@ public class SpriteSwitcher : MonoBehaviour
     private void UpdateSprite()
     {
         // Check current global world state
-        var currentState = WorldGameState.GetWorldState();
+        var currentState = WorldGameState.instance.GetWorldState();
 
         // Set the sprite depending on the state
         spriteRenderer.sprite = (currentState == DrugState.Bouba) ? spriteBouba : spriteKiki;

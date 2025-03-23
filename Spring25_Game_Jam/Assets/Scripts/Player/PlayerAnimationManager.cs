@@ -49,7 +49,7 @@ public class PlayerAnimationManager : MonoBehaviour
     }
     private void HandleDrugState()
     {
-        if (WorldGameState.GetWorldState() == DrugState.Bouba)
+        if (WorldGameState.instance.GetWorldState() == DrugState.Bouba)
         {
             player.animator.SetBool("IsBouba", true);
         }
@@ -98,7 +98,7 @@ public class PlayerAnimationManager : MonoBehaviour
         string animationToPlay = "";
 
         //this is just Bouba, need to copy/paste this for kiki as well 
-        if (WorldGameState.GetWorldState() == DrugState.Bouba)
+        if (WorldGameState.instance.GetWorldState() == DrugState.Bouba)
         {
             //if the player is moving do this 
             if (player.playerMovementManager.moveAmount > 0)
@@ -145,7 +145,7 @@ public class PlayerAnimationManager : MonoBehaviour
                 PlayTargetAnimation(animationToPlay, false);
             }
         }
-        if (WorldGameState.GetWorldState() == DrugState.Kikki)
+        if (WorldGameState.instance.GetWorldState() == DrugState.Kikki)
         {
             //if the player is moving do this 
             if (player.playerMovementManager.moveAmount > 0)

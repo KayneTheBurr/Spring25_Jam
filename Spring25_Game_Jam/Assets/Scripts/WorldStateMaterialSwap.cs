@@ -9,8 +9,9 @@ public class WorldStateMaterialSwap : MonoBehaviour
     void Awake()
     {
         mr = GetComponent<MeshRenderer>();
-        OnEnable();
+        //OnEnable();
     }
+
 
     private void OnEnable()
     {
@@ -26,15 +27,23 @@ public class WorldStateMaterialSwap : MonoBehaviour
 
     public void OnGameStateChanged()
     {
-        DrugState worldState = WorldGameState.GetWorldState();
+        DrugState worldState = WorldGameState.instance.GetWorldState();
 
         switch (worldState)
         {
             case DrugState.Bouba:
-                mr.material = boubaMaterial;
+                if(mr != null)
+                {
+                    mr.material = boubaMaterial;
+                }
+                
                 break;
             case DrugState.Kikki:
-                mr.material = kikiMaterial;
+                if (mr != null)
+                {
+                    mr.material = kikiMaterial;
+                }
+                    
                 break;
             default:
                 Debug.Log("No world state, cannot change material.");
