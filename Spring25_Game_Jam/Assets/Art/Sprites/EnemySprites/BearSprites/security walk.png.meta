@@ -1,0 +1,1349 @@
+fileFormatVersion: 2
+guid: a0ac35e1b297ffc4e9ebd043d272444e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: security walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe649695121274949b501ae64893a2dc
+      internalID: 1621963971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_1
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6542271c816e786458aeef2f72f8747d
+      internalID: -324596440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_2
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571ad10c8e40a1d4089c7e698136aaee
+      internalID: -552093543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_3
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82dd55fb5bfe96549968b39c8a0ccd5e
+      internalID: -116153048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_4
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32a02618e80dfe4fba3d5bd69cf73f0
+      internalID: 1819653644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_5
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9ab1dc8bff4ad40a592c74e9cd1a1c
+      internalID: -730526432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_6
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31db5fa941165a47b34a5be69054411
+      internalID: 1570017192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_7
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e539bc787069cd4a80f0c85030138f3
+      internalID: 666465267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ecc6578eef195419da3f1705a14bac
+      internalID: 1905176006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_9
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd8fb7377d7e214e98ffb227918a954
+      internalID: -1304667401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_10
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f9d40f3efb9ef4ba8070bc1934dafe
+      internalID: -1626545141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_11
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ac34dc810981e40a104e12d4ea2ed0
+      internalID: -936727942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_12
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ebe81f7e576af4783f2d500acadcb2
+      internalID: 1652973948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_13
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a8c879ab2b37644b282c1a8f0e34cd
+      internalID: 1365729027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_14
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058fb4b9c5f6b7a499f37d4cb2b63ec8
+      internalID: -1416294102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_15
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f39c244526338344a309ba137c514cb
+      internalID: -1046235070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a059bec39b6b8da42a00991679a162dc
+      internalID: 788029742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_17
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6e04b1013d59347a6b5c17eb48f786
+      internalID: -62156299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_18
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cbc1514ef245434da1379d10065cb7b
+      internalID: 1403685007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_19
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1984c29255b89bc49993b5a6e1829dd6
+      internalID: 815122211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_20
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479b4733388a9304785ba8878e55b46e
+      internalID: 882940644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_21
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec78052a8815e249b44f26fd7b50ab3
+      internalID: 56886409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_22
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e566e4ac8ab2ff4c8885edb7c5bb825
+      internalID: 652262883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_23
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d9a4b8b8ad25d4b973ba95e65f1833
+      internalID: 259707523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ebd54b8e561ad546bca4b25bf02348a
+      internalID: -83772130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_25
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1541a3cf6a621d1429bb2b516fb33a15
+      internalID: -1324432513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_26
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c118ecb1caa503046aad13c815b7799d
+      internalID: 1015003263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_27
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e094b8ef24dc945ac3d2387fa64b78
+      internalID: -982548635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_28
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 432f145cccf5cf642b73d9c8aafa80f1
+      internalID: 566606616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_29
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87b0e01e1b20524dbb34ad7cd35e442
+      internalID: -1208988894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_30
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b43dbc8294390449c3ddd7e708d297
+      internalID: 1761886616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_31
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4652d11f7d340044e85af17ae375338c
+      internalID: -86111637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4550ba46d9c41d6468689e06e1c5df62
+      internalID: 1996409273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_33
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05d1c3317cab3aa44845b813090d85a9
+      internalID: 197293619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_34
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a5b38e20a556a648a92c711a094f5a1
+      internalID: 2090657336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_35
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7bb657719e240f4bae5d6f44bccc43a
+      internalID: -1149463148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_36
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 715c36ef2518e6c4baa1c656da0c44f1
+      internalID: -2128363109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_37
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be789650e80358147925ec3e71349fc6
+      internalID: 844082469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_38
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 393663add6ea9ba44adf05eb8e7c26f2
+      internalID: 1694174742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_39
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a9248390d4d314b89e7baf7cd7328c
+      internalID: -1111680017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000d51d83bc6b934e9956f0727a93d74
+      internalID: -1468924025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_41
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afbce158fec961148894edc61f583f71
+      internalID: 377360524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_42
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228d8b00b1121134192d316f1b33dfa3
+      internalID: 2135539389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_43
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 910328a21bf607e4f9b8d021c3d18f95
+      internalID: 2053662851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_44
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f50f7051ae6074588a7cc65d0f7589
+      internalID: -417985325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_45
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24da5d52c888cdf45b9a07cf15851bcc
+      internalID: -1120956226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_46
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66ba17665a4fa44186ff0bb525fc01a
+      internalID: -2055040369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_47
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7481590efd2b8ed4baf176138639838f
+      internalID: -1997972421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad729bb5a1db204aa624dc115dec075
+      internalID: -608589966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_49
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 0
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01742f4524654c34fa306ee73b59ba57
+      internalID: 1939940402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_50
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 0
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e101a92254ba2dd4ca23b715611806f0
+      internalID: -572874023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_51
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 0
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941b02239423ba24e96d04b381f80c9a
+      internalID: 355317938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: security walk_52
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 0
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413dbd8c4a77c1648ab4d59c127735d7
+      internalID: -738648119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 709020fba8acf664e8c71c3fbf4feffe
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      security walk_0: 1621963971
+      security walk_1: -324596440
+      security walk_10: -1626545141
+      security walk_11: -936727942
+      security walk_12: 1652973948
+      security walk_13: 1365729027
+      security walk_14: -1416294102
+      security walk_15: -1046235070
+      security walk_16: 788029742
+      security walk_17: -62156299
+      security walk_18: 1403685007
+      security walk_19: 815122211
+      security walk_2: -552093543
+      security walk_20: 882940644
+      security walk_21: 56886409
+      security walk_22: 652262883
+      security walk_23: 259707523
+      security walk_24: -83772130
+      security walk_25: -1324432513
+      security walk_26: 1015003263
+      security walk_27: -982548635
+      security walk_28: 566606616
+      security walk_29: -1208988894
+      security walk_3: -116153048
+      security walk_30: 1761886616
+      security walk_31: -86111637
+      security walk_32: 1996409273
+      security walk_33: 197293619
+      security walk_34: 2090657336
+      security walk_35: -1149463148
+      security walk_36: -2128363109
+      security walk_37: 844082469
+      security walk_38: 1694174742
+      security walk_39: -1111680017
+      security walk_4: 1819653644
+      security walk_40: -1468924025
+      security walk_41: 377360524
+      security walk_42: 2135539389
+      security walk_43: 2053662851
+      security walk_44: -417985325
+      security walk_45: -1120956226
+      security walk_46: -2055040369
+      security walk_47: -1997972421
+      security walk_48: -608589966
+      security walk_49: 1939940402
+      security walk_5: -730526432
+      security walk_50: -572874023
+      security walk_51: 355317938
+      security walk_52: -738648119
+      security walk_6: 1570017192
+      security walk_7: 666465267
+      security walk_8: 1905176006
+      security walk_9: -1304667401
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
