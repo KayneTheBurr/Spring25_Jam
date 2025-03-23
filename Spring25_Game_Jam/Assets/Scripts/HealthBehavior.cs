@@ -101,6 +101,7 @@ public class HealthBehavior : MonoBehaviour
         {
             //im an enemy, do enemy things
             EndStatTracker.instance.AddEnemyKilled();
+            GetComponent<Enemy>().DestroyEnemy();
         }
         else if(GetComponent<PlayerManager>() != null)
         {

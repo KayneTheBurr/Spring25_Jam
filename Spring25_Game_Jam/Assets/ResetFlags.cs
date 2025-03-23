@@ -14,6 +14,13 @@ public class ResetFlags : StateMachineBehaviour
         player.canMove = true;
         player.playerCombatManager.DisableCanCombo();
 
+        if(player.playerCombatManager != null )
+        {
+            if(player.playerCombatManager.currentSpinEffect != null)
+            {
+                Destroy(player.playerCombatManager.currentSpinEffect);
+            }
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
