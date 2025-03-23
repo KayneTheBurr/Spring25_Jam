@@ -68,13 +68,13 @@ public class PlayerAnimationManager : MonoBehaviour
         if(myDirection == FacingDirection.Left || myDirection == FacingDirection.BackLeft || 
             myDirection == FacingDirection.FrontLeft)
         {
-            player.spriteRenderer.flipX = false;
+            player.animator.gameObject.transform.localScale = new Vector3 (1,1,1);
         }
         //if facing right, do flip
         if (myDirection == FacingDirection.Right || myDirection == FacingDirection.BackRight ||
             myDirection == FacingDirection.FrontRight)
         {
-            player.spriteRenderer.flipX = true;
+            player.animator.gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
         //if directly up or down, look at previous state to determine which direction to face
         if (myDirection == FacingDirection.Back || myDirection == FacingDirection.Front)
@@ -82,12 +82,12 @@ public class PlayerAnimationManager : MonoBehaviour
             if(lastDirection == FacingDirection.Left || lastDirection == FacingDirection.BackLeft ||
             lastDirection == FacingDirection.FrontLeft)
             {
-                player.spriteRenderer.flipX = false;
+                player.animator.gameObject.transform.localScale = new Vector3(1, 1, 1);
             }
             else if(lastDirection == FacingDirection.Right || lastDirection == FacingDirection.BackRight ||
             lastDirection == FacingDirection.FrontRight)
             {
-                player.spriteRenderer.flipX = true;
+                player.animator.gameObject.transform.localScale = new Vector3(-1, 1, 1);
             }
         }
     }
