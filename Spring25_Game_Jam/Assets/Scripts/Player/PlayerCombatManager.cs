@@ -119,9 +119,6 @@ public class PlayerCombatManager : MonoBehaviour
         {
             StartCoroutine(PlaySlamEffect(pointerDirection, directionToAttack));
         }
-
-        //Play a sfx depending on what attack was used
-
     }
     public IEnumerator PlaySlamEffect(Transform pointerDirection, Vector3 directionToAttack)
     {
@@ -148,7 +145,6 @@ public class PlayerCombatManager : MonoBehaviour
             SFXManager.instance.PlayBigHitSpin();
         }
     }
-    
     public void DealSpinDamage()
     {
         Collider[] hitEnemies = Physics.OverlapSphere(player.transform.position, spinDamageRadius, 7);
@@ -175,7 +171,7 @@ public class PlayerCombatManager : MonoBehaviour
     public void PerformBasicAttack()
     {
         //cant attack in kiki mode 
-        //if (WorldGameState.GetWorldState() == DrugState.Kikki) return;
+        if (WorldGameState.GetWorldState() == DrugState.Kikki) return;
         bool facingFront = true;
         
         switch (player.playerAnimationManager.myDirection)
@@ -283,6 +279,9 @@ public class PlayerCombatManager : MonoBehaviour
     }
     public void PerformHeavyAttack()
     {
+        //cant attack in kiki mode 
+        if (WorldGameState.GetWorldState() == DrugState.Kikki) return;
+
         bool facingFront = true;
         
         switch (player.playerAnimationManager.myDirection)

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3ac618e805da6214a9fda7601aa94e98
+guid: 99dc10d1fb798a44bae7b0ec1c9dd89a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Health Bar new_0
+      name: tall sign_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1650
-        width: 5100
-        height: 1650
+        y: 0
+        width: 1799
+        height: 2586
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1569124dfe3bf94083def2e59fd57c0
-      internalID: -905218201
+      spriteID: 5ba46bb4a9197664c9428bb3346fa45a
+      internalID: -894306732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Health Bar new_1
+      name: tall sign_1
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1799
         y: 0
-        width: 5100
-        height: 1650
+        width: 1799
+        height: 2586
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,8 +147,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 423f6635402da1048973e4857d40050c
-      internalID: 1608979903
+      spriteID: c732ea78d43f30d41b8fffb68dcea136
+      internalID: -1561576748
       vertices: []
       indices: 
       edges: []
@@ -157,7 +157,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4883138a460dd0c4bbc777ed12012c33
+    spriteID: c81d571d8c800da45a1f13df3886d9ce
     internalID: 0
     vertices: []
     indices: 
@@ -167,8 +167,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Health Bar new_0: -905218201
-      Health Bar new_1: 1608979903
+      tall sign_0: -894306732
+      tall sign_1: -1561576748
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
