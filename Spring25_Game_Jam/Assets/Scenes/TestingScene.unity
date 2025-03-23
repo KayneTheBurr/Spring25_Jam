@@ -2101,6 +2101,7 @@ GameObject:
   - component: {fileID: 91757072}
   - component: {fileID: 91757071}
   - component: {fileID: 91757070}
+  - component: {fileID: 91757074}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -2153,7 +2154,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9e351948573368e4c8629c5874785f6f, type: 2}
+  - {fileID: 2100000, guid: dc49851d8713f14469c85915c9ace472, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2198,6 +2199,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1350918613}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &91757074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91757069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c70432cd44ec2d4aa8cb409df40a2d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boubaMaterial: {fileID: 2100000, guid: 9e351948573368e4c8629c5874785f6f, type: 2}
+  kikiMaterial: {fileID: 2100000, guid: dc49851d8713f14469c85915c9ace472, type: 2}
 --- !u!1 &94913088
 GameObject:
   m_ObjectHideFlags: 0
@@ -19637,7 +19652,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3deac150152b70d4f81e5aa622c5dcd1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1705754689}
   m_SourcePrefab: {fileID: 100100000, guid: 3deac150152b70d4f81e5aa622c5dcd1, type: 3}
 --- !u!1 &850493908
 GameObject:
@@ -41549,6 +41567,25 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ba37a7fd98698d40b8a7a7975f291da, type: 3}
+--- !u!1 &1705754685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3deac150152b70d4f81e5aa622c5dcd1, type: 3}
+  m_PrefabInstance: {fileID: 849037584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1705754689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705754685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c70432cd44ec2d4aa8cb409df40a2d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boubaMaterial: {fileID: -3522955778539423533, guid: 3deac150152b70d4f81e5aa622c5dcd1, type: 3}
+  kikiMaterial: {fileID: 2100000, guid: 1199288b8efb8f649b8edf7fd9789e95, type: 2}
 --- !u!1001 &1705885490
 PrefabInstance:
   m_ObjectHideFlags: 0
