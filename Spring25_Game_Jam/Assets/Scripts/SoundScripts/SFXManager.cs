@@ -12,9 +12,6 @@ public class SFXManager : MonoBehaviour
     // Array of hit sounds to choose from.
     public AudioClip[] drugPickUpSounds;
 
-
-
-
     // The big hit sound clip to play.
     public AudioClip bigHitWindUp;
     public AudioClip bigHitTink;

@@ -81,12 +81,18 @@ public class HealthBehavior : MonoBehaviour
     {
         if (!isAlive) { return; }
 
-
-
         currentHealthPoints -= dmgAmount;
         // show hurt animations
-
-        if(currentHealthPoints <= 0)
+        if (GetComponent<Enemy>() != null)
+        {
+            //im an enemy, do enemy things
+        }
+        else if (GetComponent<PlayerManager>() != null)
+        {
+            //im the player, do player things
+            GetComponent<PlayerCombatManager>().TakeDamage();
+        }
+        if (currentHealthPoints <= 0)
         {
             Die();
         }
