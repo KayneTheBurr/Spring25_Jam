@@ -9675,6 +9675,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4167123169481384710}
+  - component: {fileID: 3168853886872688082}
   m_Layer: 0
   m_Name: P_Fire1
   m_TagString: Untagged
@@ -9699,3 +9700,17 @@ Transform:
   - {fileID: 7398354449838769930}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3168853886872688082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039895114499898438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d78b8999ce829574487fb33e5d1847b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  back: {fileID: 47660245397092066}
+  front: {fileID: 2579645002394340787}

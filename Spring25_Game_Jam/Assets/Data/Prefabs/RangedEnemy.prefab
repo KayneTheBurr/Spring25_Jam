@@ -125,6 +125,9 @@ MonoBehaviour:
   secondsToChargeUp: 0
   minAttackDistance: 6
   secondsToAttack: 0
+  regularMaterial: {fileID: 2100000, guid: 25d4f9ee1612cb74bb7b39e15b1afd30, type: 2}
+  hitMaterial: {fileID: 2100000, guid: 6714ecc3a07bc4549a3bb79a01190ee3, type: 2}
+  secondsToShowTint: 0.1
   rangedWeaponTransform: {fileID: 7559303508959745153}
   bulletPrefab: {fileID: 1066420834682679709, guid: f093a7c9de7f1954899809a61619cd92, type: 3}
 --- !u!1 &872734506626749980

@@ -60,7 +60,10 @@ public class HealthBehavior : MonoBehaviour
         }
         else
         {
+            if(col.gameObject.GetComponent<Enemy>() != null)
+            {
 
+            }
         }
     }
 
@@ -86,6 +89,7 @@ public class HealthBehavior : MonoBehaviour
         if (GetComponent<Enemy>() != null)
         {
             //im an enemy, do enemy things
+            GetComponent<Enemy>().TakeDamage();
         }
         else if (GetComponent<PlayerManager>() != null)
         {
