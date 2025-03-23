@@ -8,8 +8,6 @@ public class CameraCullingMask : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        Debug.Log("Enter");
-
         if(col.gameObject.layer == 6 || col.gameObject.layer == 7)
         {
             // 6 is player
@@ -19,13 +17,10 @@ public class CameraCullingMask : MonoBehaviour
             return;
         }
 
-        Debug.Log("Enter non player/enemy");
-
         SpriteRenderer colliderSP = FindRendererFromCollider(col);
 
         if(colliderSP != null)
         {
-            Debug.Log("Enter sprite");
             colliderSP.material = transparentSpriteMaterial;
             return;
         }
