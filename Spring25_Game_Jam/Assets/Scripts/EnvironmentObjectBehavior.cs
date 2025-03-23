@@ -13,6 +13,7 @@ public class EnvironmentObjectBehavior : MonoBehaviour
     {
         sp = GetComponent<SpriteRenderer>();
         OnEnable();
+        ChangeSprite();
     }
 
     public void OnEnable()
