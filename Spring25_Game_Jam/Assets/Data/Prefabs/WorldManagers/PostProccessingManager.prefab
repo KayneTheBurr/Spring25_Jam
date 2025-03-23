@@ -48,6 +48,7 @@ MonoBehaviour:
   profiles:
   - {fileID: 11400000, guid: 26c72d4c5921daa47948f40148602087, type: 2}
   - {fileID: 11400000, guid: 78e4ae47f65224f4ca4d596e69168d85, type: 2}
+  globalVolume: {fileID: 7848498368351929891}
   flash: {fileID: 0}
 --- !u!114 &7848498368351929891
 MonoBehaviour:

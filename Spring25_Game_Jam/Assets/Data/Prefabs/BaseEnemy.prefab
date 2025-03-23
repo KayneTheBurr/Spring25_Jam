@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15293c839e9b602429f5e6160816f035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 10
+  maxHealthPoints: 20
   currentHealthPoints: 10
 --- !u!114 &1140668466746118107
 MonoBehaviour:
@@ -116,7 +116,8 @@ MonoBehaviour:
   enemyState: 0
   speed: 5
   damage: 0
-  dmgFromHitbox: 5
+  dmgFromHitbox: 1
+  spriteAnim: {fileID: 0}
   maxIdleTime: 6
   minIdleTime: 4
   idleTime: 0
@@ -125,7 +126,12 @@ MonoBehaviour:
   minPatrolDistance: 5
   maxPatrolDistance: 15
   minDistanceToTarget: 0.1
+  secondsToChargeUp: 0
   minAttackDistance: 2
+  secondsToAttack: 0
+  ogColor: {r: 1, g: 0.511, b: 0.511, a: 0}
+  hitColor: {r: 1, g: 0.043000042, b: 0.043000042, a: 0.77254903}
+  secondsToShowTint: 0.2
 --- !u!195 &801192108544343688
 NavMeshAgent:
   m_ObjectHideFlags: 0

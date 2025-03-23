@@ -15,7 +15,7 @@ public class PostProcessingManager : MonoBehaviour
     //  bouba   [0]
     //  kiki    [1]
 
-    private Volume globalVolume;
+    public Volume globalVolume;
     public GameObject flash;
 
     private void Awake()

@@ -58,8 +58,10 @@ public class Enemy : MonoBehaviour
     public float secondsToAttack;
 
     [Header("Take DMG")]
-    public Material regularMaterial;
-    public Material hitMaterial;
+    public Color ogColor;
+    public Color hitColor;
+    //public Material regularMaterial;
+    //public Material hitMaterial;
     public float secondsToShowTint = 0.2f;
 
     private void Awake()
@@ -277,11 +279,12 @@ public class Enemy : MonoBehaviour
 
     IEnumerator ColorTint()
     {
-        spriteObj.GetComponent<SpriteRenderer>().material = hitMaterial;
+        
+        spriteObj.GetComponent<SpriteRenderer>().color = hitColor;
 
         yield return new WaitForSeconds(secondsToShowTint);
 
-        spriteObj.GetComponent<SpriteRenderer>().material = regularMaterial;
+        spriteObj.GetComponent<SpriteRenderer>().color = Color.white;
     }
 
     private void Die()

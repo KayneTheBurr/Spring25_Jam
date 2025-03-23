@@ -497,18 +497,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canCombo: 0
   isChargingAttack: 0
-  attackRadius: 1
+  attackRadius: 1.5
   attackRange: 5
   vfxOffest: 1.75
   slamExtraOffset: 2
   slamDelayTime: 0.4
-  spinDamageRadius: 3
+  spinDamageRadius: 4
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
   lightAttack01_Damage: 5
-  lightAttack02_Damage: 5
-  lightAttack03_Damage: 10
+  lightAttack02_Damage: 10
+  lightAttack03_Damage: 20
   heavyAttack_01_Damage: 10
   light_Attack_Front_01: Front_Light_Attack_01
   light_Attack_Front_02: Front_Light_Attack_02
