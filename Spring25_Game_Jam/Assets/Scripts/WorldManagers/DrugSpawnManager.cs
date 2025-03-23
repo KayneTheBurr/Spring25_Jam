@@ -19,11 +19,9 @@ public class DrugSpawnManager : MonoBehaviour
     void Start()
     {
         // Find all DrugSpawner components in the scene.
-<<<<<<< Updated upstream
-        spawners = new List<DrugSpawner>(FindObjectsByType<DrugSpawner>());
-=======
+
         spawners = new List<DrugSpawner>(FindObjectsByType<DrugSpawner>(FindObjectsSortMode.None));
->>>>>>> Stashed changes
+
 
         // Subscribe to the world state change event.
         WorldGameState.worldStateChanged += OnWorldStateChanged;
