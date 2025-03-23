@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Net;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -25,6 +26,8 @@ public class Enemy : MonoBehaviour
     public float damage;
     private Transform playerTransform;
     public float dmgFromHitbox = 5f;
+    private Transform spriteObj;
+    private Animator spriteAnim;
 
     [Header("Idle State")]
     public float maxIdleTime;
@@ -34,6 +37,7 @@ public class Enemy : MonoBehaviour
     [Header("Alerted State")]
     public float timeSpentAlert;
     public float maxSightRange;
+    private Coroutine alertedRoutine;
 
     [Header("Patrol State")]
     public float minPatrolDistance;
@@ -57,6 +61,9 @@ public class Enemy : MonoBehaviour
 
     public virtual void Start()
     {
+        spriteObj = transform.GetComponentInChildren<SpriteRenderer>().transform;
+        spriteAnim = transform.GetComponentInChildren<Animator>();
+
         agent = GetComponent<NavMeshAgent>();
         agent.speed = speed;
 
@@ -71,7 +78,7 @@ public class Enemy : MonoBehaviour
         {
             case EnemyStates.IDLE:
                 IdleUpdate();
-                if (GetDistanceFromPlayer() <= maxSightRange)
+                if (GetDistanceFromPlayer() < maxSightRange)
                 {
                     SetState(EnemyStates.ALERTED);
                 }
@@ -80,7 +87,7 @@ public class Enemy : MonoBehaviour
                 break;
             case EnemyStates.PATROL:
                 PatrolUpdate();
-                if (GetDistanceFromPlayer() <= maxSightRange)
+                if (GetDistanceFromPlayer() < maxSightRange)
                 {
                     SetState(EnemyStates.ALERTED);
                 }
@@ -103,6 +110,8 @@ public class Enemy : MonoBehaviour
                 Debug.Log("State doesn't exist in enemy, add it to the enum.");
                 break;
         }
+
+        SetVisuals();
     }
 
     #region Listeners
@@ -143,6 +152,22 @@ public class Enemy : MonoBehaviour
 
     #endregion
 
+    //called in update
+    private void SetVisuals()
+    {
+        // going left
+        if(transform.forward.x < 0)
+        {
+            spriteObj.localScale = new Vector3(-1, 1, 1);
+        }
+        else if(transform.forward.x > 0) //going right
+        {
+            spriteObj.localScale = new Vector3(1, 1, 1);
+        }
+
+        spriteAnim.SetBool("isMoving", agent.velocity != Vector3.zero);
+    }
+
     public void SetState(EnemyStates newEnemyState)
     {
         enemyState = newEnemyState;
@@ -153,7 +178,10 @@ public class Enemy : MonoBehaviour
                 idleTime = Random.Range(minIdleTime, maxIdleTime);
                 break;
             case EnemyStates.ALERTED:
-                StartCoroutine(AlertEnemy());
+                if(alertedRoutine == null)
+                {
+                    alertedRoutine = StartCoroutine(AlertEnemy());
+                }
                 break;
             case EnemyStates.PATROL:
                 if (!FindRandomPatrolPointOnNavMesh()) { SetState(EnemyStates.IDLE); }
@@ -180,25 +208,30 @@ public class Enemy : MonoBehaviour
     {
         // play alert animation
         agent.SetDestination(transform.position);
+        spriteAnim.SetTrigger("alerted");
 
         yield return new WaitForSeconds(timeSpentAlert);
 
         // check if in bouba or kiki
         // set to either follow or runaway
 
-        if(WorldGameState.GetWorldState() == DrugState.Kikki)
+        DrugState worldState = WorldGameState.GetWorldState();
+
+        switch (worldState)
         {
-            SetState(EnemyStates.FOLLOW);
+            case DrugState.Bouba:
+                SetState(EnemyStates.RUNAWAY);
+                break;
+            case DrugState.Kikki:
+                SetState(EnemyStates.FOLLOW);
+                break;
+            default:
+                Debug.Log("No world game state.");
+                SetState(EnemyStates.IDLE);
+                break;
         }
-        else if(WorldGameState.GetWorldState() == DrugState.Bouba)
-        {
-            SetState(EnemyStates.RUNAWAY);
-        }
-        else
-        {
-            Debug.Log("No world game state.");
-            SetState(EnemyStates.IDLE);
-        }
+
+        alertedRoutine = null;
     }
 
     private bool FindRandomPatrolPointOnNavMesh()
