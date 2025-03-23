@@ -2314,10 +2314,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -2713078096807508536, guid: 92481558295a0594d96241aa024f1c81, type: 3}
-      propertyPath: isKiKiMenu
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 420029059567150210, guid: 92481558295a0594d96241aa024f1c81, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
