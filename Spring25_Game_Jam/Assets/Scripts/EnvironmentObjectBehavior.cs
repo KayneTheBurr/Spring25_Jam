@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnvironmentObjectBehavior : MonoBehaviour
 {
     SpriteRenderer sp;
+    Animator anim;
     public Sprite boubaSprite;
     public Sprite kikiSprite;
 
@@ -12,6 +13,7 @@ public class EnvironmentObjectBehavior : MonoBehaviour
     void Awake()
     {
         sp = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         OnEnable();
         ChangeSprite();
     }
@@ -33,6 +35,12 @@ public class EnvironmentObjectBehavior : MonoBehaviour
         if(WorldGameState.GetWorldState() == DrugState.Bouba)
         {
             sp.sprite = boubaSprite;
+
+            if(anim != null)
+            {
+                anim.SetBool("isBouba", true);
+            }
+
             if(kikiMoodLight != null)
             {
                 kikiMoodLight.SetActive(false);
@@ -41,6 +49,12 @@ public class EnvironmentObjectBehavior : MonoBehaviour
         else if(WorldGameState.GetWorldState() == DrugState.Kikki)
         {
             sp.sprite = kikiSprite;
+
+            if (anim != null)
+            {
+                anim.SetBool("isBouba", false);
+            }
+
             if (kikiMoodLight != null)
             {
                 kikiMoodLight.SetActive(true);
