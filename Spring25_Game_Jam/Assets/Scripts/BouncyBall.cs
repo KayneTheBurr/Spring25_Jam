@@ -12,6 +12,8 @@ public class BouncyBall : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+
+
         rb.AddForce(Vector3.up * upBounceMultiplyer, ForceMode.Impulse);
     }
 }

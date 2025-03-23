@@ -3,10 +3,13 @@ using UnityEngine.UI;
 
 public class UIGameStateIdentifiers : MonoBehaviour
 {
-    public Image gameStateIcon;
+    private Image icon;
+    public Sprite boubaSprite;
+    public Sprite kikiSprite;
 
     private void Awake()
     {
+        icon = GetComponent<Image>();
         OnEnable();
     }
 
@@ -42,11 +45,11 @@ public class UIGameStateIdentifiers : MonoBehaviour
 
     private void SetBoubaUI()
     {
-        gameStateIcon.color = Color.green;
+        icon.sprite = boubaSprite;
     }
 
     private void SetKikkiUI()
     {
-        gameStateIcon.color = Color.red;
+        icon.sprite = kikiSprite;
     }
 }
