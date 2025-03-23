@@ -8,6 +8,12 @@ public class PlayerCombatManager : MonoBehaviour
 
     public bool isChargingAttack = false;
 
+    [Header("Attack Damage Values")]
+    public float lightAttack01_Damage;
+    public float lightAttack02_Damage;
+    public float lightAttack03_Damage;
+    public float heavyAttack_01_Damage;
+
     [Header("Front Light Attacks")]
     [SerializeField] string light_Attack_Front_01 = "Front_Light_Attack_01";
     [SerializeField] string light_Attack_Front_02 = "Front_Light_Attack_02";
@@ -20,7 +26,7 @@ public class PlayerCombatManager : MonoBehaviour
     [SerializeField] string light_Attack_Back_01 = "Back_Light_Attack_01";
     [SerializeField] string light_Attack_Back_02 = "Back_Light_Attack_02";
     [SerializeField] string light_Attack_Back_03 = "Back_Light_Attack_03";
-    
+
     [Header("Back Heavy Attacks")]
     [SerializeField] string heavy_Attack_Back_01 = "Back_Heavy_Attack_01";
 
@@ -31,8 +37,29 @@ public class PlayerCombatManager : MonoBehaviour
     private void DealDamage(string attackAnim)
     {
         FacingDirection direction = player.GetPointerDirection();
+        float damageDone = 0;
 
         //determnine the damage of the hit based on the attackAnim string passed in 
+        if(attackAnim == light_Attack_Back_01 || attackAnim == light_Attack_Front_01)
+        {
+            damageDone = lightAttack01_Damage;
+        }
+        else if(attackAnim == light_Attack_Back_02 || attackAnim == light_Attack_Front_02)
+        {
+            damageDone = lightAttack02_Damage;
+        }
+        else if(attackAnim == light_Attack_Back_03 || attackAnim == light_Attack_Front_03)
+        {
+            damageDone = lightAttack03_Damage;
+        }
+        else if(attackAnim == heavy_Attack_Back_01 || attackAnim == heavy_Attack_Front_01)
+        {
+            damageDone = heavyAttack_01_Damage;
+        }
+        else
+        {
+            damageDone = lightAttack01_Damage;
+        }
 
         //use the facing direction to detect for enemies in that direction
 
