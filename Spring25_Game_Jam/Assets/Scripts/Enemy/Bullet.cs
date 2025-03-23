@@ -23,4 +23,14 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.GetComponent<BulletSpawn>()) { return; }
+
+        if (!col.isTrigger || col.gameObject.GetComponent<Bullet>())
+        {
+            HitSomething();
+        }
+    }
 }
