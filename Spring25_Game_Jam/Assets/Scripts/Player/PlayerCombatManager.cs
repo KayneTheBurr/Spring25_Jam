@@ -39,7 +39,8 @@ public class PlayerCombatManager : MonoBehaviour
     [Header("Back Heavy Attacks")]
     [SerializeField] string heavy_Attack_Back_01 = "Back_Heavy_Attack_01";
 
-    GameObject currentChargingEffect;
+    public GameObject currentChargingEffect;
+    public GameObject currentSpinEffect;
 
     private void Awake()
     {
@@ -118,9 +119,32 @@ public class PlayerCombatManager : MonoBehaviour
         currentChargingEffect = ParticleManager.instance.spawnParticleObject(ParticleManager.instance.particles[7],
             transform.position, Quaternion.identity, player.transform);
     }
+    public void StartSpinEffect()
+    {
+        if (currentSpinEffect == null)
+        {
+            currentSpinEffect = ParticleManager.instance.spawnParticleObject(ParticleManager.instance.vfx[0],
+                transform.position, Quaternion.identity, player.transform);
+        }
+    }
+    
+    public void DealSpinDamage()
+    {
+        Collider[] hitEnemies = Physics.OverlapSphere(player.transform.position, spinDamageRadius, 7);
+        foreach(var enemy in hitEnemies)
+        {
+            if(enemy.GetComponent<Enemy>() != null)
+            {
+                enemy.GetComponent<HealthBehavior>().TakeDMG(heavyAttack_01_Damage);
+            }
+        }
+    }
     public void DestroyChargingEffects()
     {
-
+        if(currentChargingEffect != null)
+        {
+            Destroy(currentChargingEffect);
+        }
     }
     private void Update()
     {

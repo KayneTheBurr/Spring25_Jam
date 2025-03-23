@@ -14,12 +14,16 @@ public class PlayerAnimationEventReciever : MonoBehaviour
     }
     public void SpinAttackDamage()
     {
-
+        player.playerCombatManager.DealSpinDamage();
     }
-
     public void DestroyChargingFX()
     {
-
+        player.playerCombatManager.DestroyChargingEffects();
     }
+    public void StartSpinVFX()
+    {
+        player.playerCombatManager.StartSpinEffect();
+    }
+    
     
 }

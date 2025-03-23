@@ -31,10 +31,14 @@ public class ParticleManager : MonoBehaviour
         GameObject newParticles = Instantiate(prefab, pos, rot, parent);
         return newParticles;
     }
-
     public void spawnVFX(GameObject prefab, Vector3 pos, Quaternion rot, Transform parent, float destroyDelay)
     {
         GameObject newVFX = Instantiate(prefab, pos, rot, parent);
         Destroy(newVFX, destroyDelay);
+    }
+    public GameObject spawnVFXObject(GameObject prefab, Vector3 pos, Quaternion rot, Transform parent)
+    {
+        GameObject newVFX = Instantiate(prefab, pos, rot, parent);
+        return newVFX;
     }
 }

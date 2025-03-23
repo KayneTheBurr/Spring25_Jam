@@ -54,4 +54,5 @@ MonoBehaviour:
   - {fileID: 3638544275161819691, guid: 883867b2bd80cd844804cb0be2dfbda6, type: 3}
   - {fileID: 3638544275161819691, guid: 4051f3de09758f84883e6909d75d1706, type: 3}
   vfx:
+  - {fileID: 4449938271306797657, guid: ea31a300db4861842a1ff636f108151a, type: 3}
   - {fileID: 2508971772942772274, guid: 0f480a2c15fbef74e978c54bccf3fb89, type: 3}
