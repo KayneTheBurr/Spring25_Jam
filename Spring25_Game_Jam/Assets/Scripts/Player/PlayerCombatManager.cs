@@ -4,9 +4,13 @@ public class PlayerCombatManager : MonoBehaviour
 {
     PlayerManager player;
 
+    [Header("Flags")]
     public bool canCombo = false;
-
     public bool isChargingAttack = false;
+
+    [Header("Attack Values")]
+    public float attackRadius = 5f;
+    public float attackRange = 5f;
 
     [Header("Attack Damage Values")]
     public float lightAttack01_Damage;
@@ -62,41 +66,29 @@ public class PlayerCombatManager : MonoBehaviour
         }
 
         //use the facing direction to detect for enemies in that direction
-        Vector3 directionToAttack = Vector3.zero;
-        switch(direction)
+        Transform pointerDirection = player.attackDirection;
+        Vector3 directionToAttack = pointerDirection.forward;
+
+        Debug.DrawLine(pointerDirection.position, pointerDirection.position + directionToAttack * attackRange, Color.red, 2f);
+        RaycastHit[] enemiesHit = Physics.SphereCastAll(pointerDirection.position, attackRadius, directionToAttack, attackRange);
+
+        foreach(var hit in enemiesHit)
         {
-            case FacingDirection.Left:
-                directionToAttack = Vector3.left;
-                break;
-            case FacingDirection.BackLeft:
-                directionToAttack = new Vector3(-1,0,1);
-                break;
-            case FacingDirection.Back:
-                directionToAttack = Vector3.left;
-                break;
-            case FacingDirection.BackRight:
-                directionToAttack = new Vector3(-1, 0, 1);
-                break;
-            case FacingDirection.Right:
-                directionToAttack = Vector3.right;
-                break;
-            case FacingDirection.FrontRight:
-                directionToAttack = new Vector3(-1, 0, 1);
-                break;
-            case FacingDirection.Front:
-                directionToAttack = Vector3.back;
-                break;
-            case FacingDirection.FrontLeft:
-                directionToAttack = new Vector3(-1, 0, 1);
-                break;
-                
+            HealthBehavior healthLogic = hit.transform.GetComponent<HealthBehavior>();
+            if(healthLogic != null)
+            {
+                healthLogic.TakeDMG(damageDone);
+            }
         }
 
         //spawn a vfx prefab that direction using the Particle Manager 
+        SpawnAttackVFX();
 
         //Play a sfx depending on what attack was used
 
-
+    }
+    public void SpawnAttackVFX()
+    {
 
     }
     private void Update()
