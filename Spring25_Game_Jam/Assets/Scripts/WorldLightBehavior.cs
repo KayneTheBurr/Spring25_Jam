@@ -16,11 +16,13 @@ public class WorldLightBehavior : MonoBehaviour
     public void OnEnable()
     {
         WorldGameState.worldStateChanged += OnGameStateChange;
+        SceneChangeHandler.onSceneChange += OnDisable;
     }
 
     public void OnDisable()
     {
         WorldGameState.worldStateChanged -= OnGameStateChange;
+        SceneChangeHandler.onSceneChange -= OnDisable;
     }
 
     public void OnGameStateChange()

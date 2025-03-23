@@ -13,11 +13,13 @@ public class UIGameStateIdentifiers : MonoBehaviour
     public void OnEnable()
     {
         WorldGameState.worldStateChanged += OnWorldStateChange;
+        SceneChangeHandler.onSceneChange += OnDisable;
     }
 
     public void OnDisable()
     {
         WorldGameState.worldStateChanged -= OnWorldStateChange;
+        SceneChangeHandler.onSceneChange -= OnDisable;
     }
 
     public void OnWorldStateChange()

@@ -15,11 +15,13 @@ public class WorldStateMaterialSwap : MonoBehaviour
     private void OnEnable()
     {
         WorldGameState.worldStateChanged += OnGameStateChanged;
+        SceneChangeHandler.onSceneChange += OnDisable;
     }
 
     private void OnDisable()
     {
         WorldGameState.worldStateChanged -= OnGameStateChanged;
+        SceneChangeHandler.onSceneChange -= OnDisable;
     }
 
     public void OnGameStateChanged()

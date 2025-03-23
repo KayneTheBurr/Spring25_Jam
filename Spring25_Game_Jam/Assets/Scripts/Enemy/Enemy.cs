@@ -125,11 +125,13 @@ public class Enemy : MonoBehaviour
     public void OnEnable()
     {
         WorldGameState.worldStateChanged += OnGameStateChanged;
+        SceneChangeHandler.onSceneChange += OnDisable;
     }
 
     public void OnDisable()
     {
         WorldGameState.worldStateChanged -= OnGameStateChanged;
+        SceneChangeHandler.onSceneChange -= OnDisable;
     }
 
     public void OnGameStateChanged()
