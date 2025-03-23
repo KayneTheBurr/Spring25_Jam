@@ -166,13 +166,13 @@ public class PlayerCombatManager : MonoBehaviour
     public void DealSpinDamage()
     {
         Collider[] hitEnemies = Physics.OverlapSphere(player.transform.position, spinDamageRadius, enemyLayer);
-        
+        Debug.Log(hitEnemies.Length);
         foreach (var enemy in hitEnemies)
         {
-            
+            Debug.Log(enemy + "test 1");
             if (enemy.GetComponent<Enemy>() != null)
             {
-                
+                Debug.Log(enemy + "test 2");
                 enemy.GetComponent<HealthBehavior>().TakeDMG(heavyAttack_01_Damage);
             }
         }
@@ -334,7 +334,7 @@ public class PlayerCombatManager : MonoBehaviour
         {
             if (!player.isPerformingAction)
             {
-                //Debug.Log("Play heavy attack back");
+                Debug.Log("Play heavy attack back");
                 player.playerAnimationManager.PlayTargetAnimation(heavy_Attack_Back_01, true);
                 DealDamage(heavy_Attack_Back_01);
             }

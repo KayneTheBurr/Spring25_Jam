@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawners: []
-  enemiesPerCycle: 8
+  enemiesPerCycle: 6
   cycleTime: 10
 --- !u!114 &2332251882326892080
 MonoBehaviour:
