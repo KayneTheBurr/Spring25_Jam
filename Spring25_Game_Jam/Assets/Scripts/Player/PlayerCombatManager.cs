@@ -15,6 +15,7 @@ public class PlayerCombatManager : MonoBehaviour
     public float vfxOffest = 2f;
     public float slamExtraOffset = 2f;
     public float slamDelayTime = 2;
+    public float spinDamageRadius = 3f;
         
     [Header("Attack Damage Values")]
     public float lightAttack01_Damage;
@@ -38,6 +39,9 @@ public class PlayerCombatManager : MonoBehaviour
     [Header("Back Heavy Attacks")]
     [SerializeField] string heavy_Attack_Back_01 = "Back_Heavy_Attack_01";
 
+    public GameObject currentChargingEffect;
+    public GameObject currentSpinEffect;
+
     private void Awake()
     {
         player = GetComponent<PlayerManager>();
@@ -46,24 +50,26 @@ public class PlayerCombatManager : MonoBehaviour
     {
         FacingDirection direction = player.GetPointerDirection();
         float damageDone = 0;
-        
+
+        if (attackAnim == heavy_Attack_Back_01 || attackAnim == heavy_Attack_Front_01)
+        {
+            HandleHeavyAttackDamage();
+            return;
+
+        }
 
         //determnine the damage of the hit based on the attackAnim string passed in 
-        if(attackAnim == light_Attack_Back_01 || attackAnim == light_Attack_Front_01)
+        if (attackAnim == light_Attack_Back_01 || attackAnim == light_Attack_Front_01)
         {
             damageDone = lightAttack01_Damage;
         }
-        else if(attackAnim == light_Attack_Back_02 || attackAnim == light_Attack_Front_02)
+        else if (attackAnim == light_Attack_Back_02 || attackAnim == light_Attack_Front_02)
         {
             damageDone = lightAttack02_Damage;
         }
-        else if(attackAnim == light_Attack_Back_03 || attackAnim == light_Attack_Front_03)
+        else if (attackAnim == light_Attack_Back_03 || attackAnim == light_Attack_Front_03)
         {
             damageDone = lightAttack03_Damage;
-        }
-        else if(attackAnim == heavy_Attack_Back_01 || attackAnim == heavy_Attack_Front_01)
-        {
-            damageDone = heavyAttack_01_Damage;
         }
         else
         {
@@ -107,6 +113,38 @@ public class PlayerCombatManager : MonoBehaviour
 
         ParticleManager.instance.spawnParticles(ParticleManager.instance.particles[6],
             pointerDirection.position + directionToAttack * (vfxOffest + slamExtraOffset), Quaternion.LookRotation(directionToAttack), player.transform);
+    }
+    private void HandleHeavyAttackDamage()
+    {
+        currentChargingEffect = ParticleManager.instance.spawnParticleObject(ParticleManager.instance.particles[7],
+            transform.position, Quaternion.identity, player.transform);
+    }
+    public void StartSpinEffect()
+    {
+        if (currentSpinEffect == null)
+        {
+            currentSpinEffect = ParticleManager.instance.spawnParticleObject(ParticleManager.instance.vfx[0],
+                transform.position, Quaternion.identity, player.transform);
+        }
+    }
+    
+    public void DealSpinDamage()
+    {
+        Collider[] hitEnemies = Physics.OverlapSphere(player.transform.position, spinDamageRadius, 7);
+        foreach(var enemy in hitEnemies)
+        {
+            if(enemy.GetComponent<Enemy>() != null)
+            {
+                enemy.GetComponent<HealthBehavior>().TakeDMG(heavyAttack_01_Damage);
+            }
+        }
+    }
+    public void DestroyChargingEffects()
+    {
+        if(currentChargingEffect != null)
+        {
+            Destroy(currentChargingEffect);
+        }
     }
     private void Update()
     {
@@ -272,6 +310,6 @@ public class PlayerCombatManager : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position,attackRadius);
+        Gizmos.DrawWireSphere(transform.position, spinDamageRadius);
     }
 }

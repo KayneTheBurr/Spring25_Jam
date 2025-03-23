@@ -12,5 +12,18 @@ public class PlayerAnimationEventReciever : MonoBehaviour
     {
         player.playerCombatManager.EnableCanCombo();
     }
+    public void SpinAttackDamage()
+    {
+        player.playerCombatManager.DealSpinDamage();
+    }
+    public void DestroyChargingFX()
+    {
+        player.playerCombatManager.DestroyChargingEffects();
+    }
+    public void StartSpinVFX()
+    {
+        player.playerCombatManager.StartSpinEffect();
+    }
+    
     
 }
