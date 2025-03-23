@@ -10,6 +10,11 @@ public class DrugPickup : MonoBehaviour
     private AudioSource audioSource;
     private PlayerStatsManager statsManager;
 
+    void Awake()
+    {
+        OnEnable();
+    }
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -26,18 +31,39 @@ public class DrugPickup : MonoBehaviour
             statsManager = other.GetComponent<PlayerStatsManager>();
             if (statsManager != null)
             {
-                // For kiki and bouba drug state and switch weapon
-                //statsManager.SwitchDrugState(DrugState.Bouba);
-                WorldGameState.ChangeWorldState(DrugState.Bouba);
-                //statsManager.SwitchWeapon(weaponType);
-
                 if (pickupSound != null)
                 {
                     audioSource.PlayOneShot(pickupSound);  // play sound after pickup the object
                 }
 
-                Destroy(gameObject);
+                // For kiki and bouba drug state and switch weapon
+                //statsManager.SwitchWeapon(weaponType);
+
+                WorldGameState.ChangeWorldState(DrugState.Bouba);
             }
         }
     }
+
+    #region Listeners
+
+    private void OnEnable()
+    {
+        WorldGameState.worldStateChanged += OnWorldStateChanged;
+    }
+
+    private void OnDisable()
+    {
+        WorldGameState.worldStateChanged -= OnWorldStateChanged;
+    }
+
+    public void OnWorldStateChanged()
+    {
+        if(WorldGameState.GetWorldState() == DrugState.Bouba)
+        {
+            OnDisable();
+            Destroy(gameObject);
+        }
+    }
+
+    #endregion
 }
