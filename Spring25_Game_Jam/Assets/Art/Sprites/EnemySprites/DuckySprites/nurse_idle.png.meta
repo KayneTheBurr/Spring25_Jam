@@ -1,0 +1,1349 @@
+fileFormatVersion: 2
+guid: 689e78cab560219439061d0ce9f65a06
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nurse_idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8851f2604462feb4ab76473fa29ae479
+      internalID: 1749298276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_1
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5abfb6927542d764c8d8c25497e83f3b
+      internalID: 1451528051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_2
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc281149eb63f754487138b12e29eaf3
+      internalID: 1024185863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_3
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc12d23e29d92b4baba92fa072dabee
+      internalID: -626652167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_4
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d97751fce9cf14bbf14bc3176d58c6
+      internalID: -1052833643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_5
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d5d304802e2004b9d11a14c86ef302
+      internalID: 2113429749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_6
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83bf1eaf8a74e6544b6db4c00dab155f
+      internalID: -893605404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_7
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c924b2356ff1e84d872a81718b6dc68
+      internalID: -797480581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49abb0ed56e95aa47858548e7f949cf8
+      internalID: -2048892523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_9
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84ac04a862ed67439527252e3741d52
+      internalID: 2069917110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_10
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 356d5bbdb3b38a94183318a1658d4404
+      internalID: -766382033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_11
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d4485d15849574e99ef57e6bcbc10e
+      internalID: 1801050839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_12
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d828380585d6f44bc7fffecfb0723d
+      internalID: 1781851907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_13
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852a33418347896449f37e4c63a97da6
+      internalID: 769840370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_14
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b1c53f1395c677429fb82acfe1811e4
+      internalID: 393297811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_15
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a263de777f48d2047914fe87d414681a
+      internalID: -1822647741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7698d9f745b0bd44972980fec4395f5
+      internalID: -1831131484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_17
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf870ebd18c7834ca96efda4c255a86
+      internalID: -1026427223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_18
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd07b4c3053e7745877d6f42c7c6dbd
+      internalID: 1810200363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_19
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428ec5f4aaaf1b248b8145e063f29612
+      internalID: -528979088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_20
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6432c96e557f6d84fac63d3bb11f3973
+      internalID: -594442133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_21
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c410996c685c2d4f9a9826893aca56b
+      internalID: -203882903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_22
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c9154d66e682641aff68c3c95b5c8f
+      internalID: 718686863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_23
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff043e98a598ba40b275570cde9a279
+      internalID: 617991838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad10651c8d6c5e4998fb1f29d0002d1
+      internalID: 226740267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_25
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad9d3bd912672e42835f5d716157765
+      internalID: 1645231505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_26
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 676e211a90b6b3a46bc0b87c2081634a
+      internalID: -1174568165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_27
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10d15332a389c5469dcf9d8d44044f8
+      internalID: -1715068125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_28
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc7447cfa98788d4dba73a3228775a67
+      internalID: -1297349280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_29
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7441c6ed98a52f4296daf5b3e12817a
+      internalID: 5581133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_30
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7baf395cda7ace84fa45f27c790662e1
+      internalID: -120558438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_31
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d949f9407df3ff4d862f4d37a7ec814
+      internalID: -506018554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582629ce8397a824fa95b195188b078a
+      internalID: 1149682691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_33
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388145ecb5537aa4da82b92f41757bac
+      internalID: -1186730503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_34
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0393540053333c046ab79771e72a8318
+      internalID: 459709573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_35
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a774b09d19dd0541906dc0ab5695ed5
+      internalID: -86393546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_36
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3f4ff4efb647524788b864a218b6af2
+      internalID: 367971081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_37
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d38aff0933a284c8c3f45baef476b0
+      internalID: 680065586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_38
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd665b2020f0062408293cbae5812651
+      internalID: 825989499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_39
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9081bcca74bb5044290007fb2a927e3a
+      internalID: -550980582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8ee5ec3ab41f343b2d8ba75eaac2a2
+      internalID: 854154088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_41
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be43ef3cb32b779498df68068af9ebd4
+      internalID: 1514181953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_42
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804ab0de1abefb044b8cb033827d361c
+      internalID: 671703205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_43
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451e270f946e24f49ba52bc3f45a9e93
+      internalID: 2114630431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_44
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0bc63782221b004aa2a1aecbda8b040
+      internalID: -1377638308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_45
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1948ddcfbdc3b2847895aabe9b9ef00a
+      internalID: -1300384244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_46
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a8320d9221b2848bd7b4d723272d02
+      internalID: 101929399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_47
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a015ad7b65ee34b9eeb63ee182a601
+      internalID: 447771380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24391f87e1c0d54ebf3b99150cb92e5
+      internalID: 1872986466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_49
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 0
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d8b968a31d40042955c31af33e5eff
+      internalID: 2049393250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_50
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 0
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0581ccd050d2e74db595bb2c28ee750
+      internalID: 361509569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_51
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 0
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51914e996d336384484913cd76ce5225
+      internalID: -1787755788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse_idle_52
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 0
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe3ef5e158671842a502ee50051b441
+      internalID: 860208811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4cfa59c1678243c4680350ae2fe46d0b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      nurse_idle_0: 1749298276
+      nurse_idle_1: 1451528051
+      nurse_idle_10: -766382033
+      nurse_idle_11: 1801050839
+      nurse_idle_12: 1781851907
+      nurse_idle_13: 769840370
+      nurse_idle_14: 393297811
+      nurse_idle_15: -1822647741
+      nurse_idle_16: -1831131484
+      nurse_idle_17: -1026427223
+      nurse_idle_18: 1810200363
+      nurse_idle_19: -528979088
+      nurse_idle_2: 1024185863
+      nurse_idle_20: -594442133
+      nurse_idle_21: -203882903
+      nurse_idle_22: 718686863
+      nurse_idle_23: 617991838
+      nurse_idle_24: 226740267
+      nurse_idle_25: 1645231505
+      nurse_idle_26: -1174568165
+      nurse_idle_27: -1715068125
+      nurse_idle_28: -1297349280
+      nurse_idle_29: 5581133
+      nurse_idle_3: -626652167
+      nurse_idle_30: -120558438
+      nurse_idle_31: -506018554
+      nurse_idle_32: 1149682691
+      nurse_idle_33: -1186730503
+      nurse_idle_34: 459709573
+      nurse_idle_35: -86393546
+      nurse_idle_36: 367971081
+      nurse_idle_37: 680065586
+      nurse_idle_38: 825989499
+      nurse_idle_39: -550980582
+      nurse_idle_4: -1052833643
+      nurse_idle_40: 854154088
+      nurse_idle_41: 1514181953
+      nurse_idle_42: 671703205
+      nurse_idle_43: 2114630431
+      nurse_idle_44: -1377638308
+      nurse_idle_45: -1300384244
+      nurse_idle_46: 101929399
+      nurse_idle_47: 447771380
+      nurse_idle_48: 1872986466
+      nurse_idle_49: 2049393250
+      nurse_idle_5: 2113429749
+      nurse_idle_50: 361509569
+      nurse_idle_51: -1787755788
+      nurse_idle_52: 860208811
+      nurse_idle_6: -893605404
+      nurse_idle_7: -797480581
+      nurse_idle_8: -2048892523
+      nurse_idle_9: 2069917110
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

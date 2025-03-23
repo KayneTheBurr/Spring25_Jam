@@ -56,20 +56,23 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
+        spriteObj = transform.GetComponentInChildren<SpriteRenderer>().transform;
+        spriteAnim = transform.GetComponentInChildren<Animator>();
+
+        agent = GetComponent<NavMeshAgent>();
+
         OnEnable();
     }
 
     public virtual void Start()
     {
-        spriteObj = transform.GetComponentInChildren<SpriteRenderer>().transform;
-        spriteAnim = transform.GetComponentInChildren<Animator>();
-
-        agent = GetComponent<NavMeshAgent>();
         agent.speed = speed;
 
         playerTransform = FindFirstObjectByType<PlayerMovementManager>().gameObject.transform;
 
         SetState(EnemyStates.IDLE);
+
+        OnGameStateChanged();
     }
 
     public virtual void Update()
@@ -133,12 +136,14 @@ public class Enemy : MonoBehaviour
         switch (gameState)
         {
             case DrugState.Kikki:
+                spriteAnim.SetFloat("worldState", 0);
                 if(enemyState == EnemyStates.RUNAWAY)
                 {
                     SetState(EnemyStates.ALERTED);
                 }
                 break;
             case DrugState.Bouba:
+                spriteAnim.SetFloat("worldState", 1);
                 if (enemyState == EnemyStates.FOLLOW)
                 {
                     SetState(EnemyStates.ALERTED);

@@ -1,0 +1,1349 @@
+fileFormatVersion: 2
+guid: f017b47f18a86b140be49081716d8882
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nurse walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57cc5588f2ce54c499af0368a701bc85
+      internalID: 1654616873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_1
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d88060e43244834aae0abaacc2fc83e
+      internalID: -1605940763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_2
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aba8681ec2b2984baf1d5e1574e4ddc
+      internalID: -1150083405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_3
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b75e8935fb77c4899b3647ae477943
+      internalID: -1345296821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_4
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4890db3c455bd8445a1dd70dc34d9595
+      internalID: -70413379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_5
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9ed89e1894bdc40a630df0b29dd5a2
+      internalID: 875150563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_6
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f32430658f5e648977773d2dc5c04e
+      internalID: -958972276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_7
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 2232
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c6bd6193fdf1f4baaab06dbd75b6d4
+      internalID: 1504774574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdb992e3494f16499bf5261bcb425f3
+      internalID: 457837003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_9
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae3d7003e89101498f106f3256a5be9
+      internalID: 625749157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_10
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026dcce2a3de88849b4f56cc402787f5
+      internalID: -1212357653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_11
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eec7e79f3b21b24d8d66861d92a7fb0
+      internalID: -2044460910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_12
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74786a70036e68042ba9b03ba9488fd2
+      internalID: -999171229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_13
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f02fb91f5b2794785c8ee9ce6ecc57
+      internalID: -1289548792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_14
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4076d013d7af111408d7a70e734b1ebc
+      internalID: -1538493050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_15
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 1860
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f93a7fec4ef23444791b357a51c416e7
+      internalID: -248484231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1573dec256164d4ea510829805172c4
+      internalID: 1319607951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_17
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0efc91c8b30609d438bd95bbf3519f3a
+      internalID: -105567021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_18
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39af4fa5da08310419ef0f7f535ff7ea
+      internalID: 198282130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_19
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e72a35cea16c0d4a9b60b4d6c9d3bba
+      internalID: 2112357178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_20
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9707ac86090720a4582ce7d626548946
+      internalID: -614225082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_21
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88fb89252dc2dec43b8a189d7870bf67
+      internalID: 302380362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_22
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0781a4e6a4424804c8b388082520c892
+      internalID: 526896500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_23
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 1488
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18eb74516b4fc94fa6a2dfe2eb56969
+      internalID: -1675466729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765d0d72d49e99a45800839043ae2b02
+      internalID: -167758581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_25
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98435cd7f91b80a42b1a2d885305b344
+      internalID: -1990757851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_26
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2874063da5dd5cd44813474e1b3f93a8
+      internalID: 2033020869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_27
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ef3b471a2042d4ba87e752bcd284d5
+      internalID: -1348253270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_28
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41376fa844ce1324384aa1ca773436ab
+      internalID: -176994288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_29
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3f18b897d01ed47bd047c0e0e2bff9
+      internalID: 173042005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_30
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20bcc01842b1a9548a6fdf34510783e7
+      internalID: -141716701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_31
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 1116
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df44bf715284f840bb953cc671a4ab9
+      internalID: -1709371536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ae0087d2dff7541a64b99079a752e0
+      internalID: -2142464889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_33
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2e82183fa3d994fb3a2270db268b63
+      internalID: 631868297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_34
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 194d6e90aafe8bc4b8d617246acd0b6d
+      internalID: 833207974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_35
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1317bdbbb4256bf4aa90c7d4293d3191
+      internalID: 326538518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_36
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137ae48f0b402c042bf47a5ddb5c8159
+      internalID: -1521968094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_37
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e720fc0d3734f94f8ba6c6484e09ce9
+      internalID: -1472761810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_38
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f334254278c69164998f217fa2870525
+      internalID: -1929973069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_39
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 744
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5659bf456d61c143bd1fc90e0dbe03c
+      internalID: -627507222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f4c6e0580980b47ad7f5a550e87b11
+      internalID: 1618718852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_41
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb2636b8f349ac44c90082ff7e093782
+      internalID: -265060121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_42
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3051cad46c1d7dc4797aa301270d6b5d
+      internalID: -113107776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_43
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74072e3e993428143ab86d998cd389b2
+      internalID: -1636962131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_44
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93375e7ad873a694baf1ddba6617853b
+      internalID: 924575969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_45
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc9ed9cfcd868842b822dd7c6eb215b
+      internalID: 370819776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_46
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9051a7b07aa7184f8523f8e2d45f64e
+      internalID: 93847214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_47
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 372
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab53a9dcc337646438842c8c432a2ef7
+      internalID: -792640187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e0a7ebece1bca4f91a09cf516fa227
+      internalID: -1917344765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_49
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 0
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b96f1155aa0c94e8ffe53c558c0b6c
+      internalID: -1604904690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_50
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 0
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643106fb9052f8145be67f68db51c3da
+      internalID: -1733690453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_51
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 0
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4624496d255697e4c97d5add8d03f4f6
+      internalID: -1380828622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurse walk_52
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 0
+        width: 491
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc241502268fa154a919d58f4e860905
+      internalID: -1594923821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1c08aab4025ffd1469f1d239100fd500
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      nurse walk_0: 1654616873
+      nurse walk_1: -1605940763
+      nurse walk_10: -1212357653
+      nurse walk_11: -2044460910
+      nurse walk_12: -999171229
+      nurse walk_13: -1289548792
+      nurse walk_14: -1538493050
+      nurse walk_15: -248484231
+      nurse walk_16: 1319607951
+      nurse walk_17: -105567021
+      nurse walk_18: 198282130
+      nurse walk_19: 2112357178
+      nurse walk_2: -1150083405
+      nurse walk_20: -614225082
+      nurse walk_21: 302380362
+      nurse walk_22: 526896500
+      nurse walk_23: -1675466729
+      nurse walk_24: -167758581
+      nurse walk_25: -1990757851
+      nurse walk_26: 2033020869
+      nurse walk_27: -1348253270
+      nurse walk_28: -176994288
+      nurse walk_29: 173042005
+      nurse walk_3: -1345296821
+      nurse walk_30: -141716701
+      nurse walk_31: -1709371536
+      nurse walk_32: -2142464889
+      nurse walk_33: 631868297
+      nurse walk_34: 833207974
+      nurse walk_35: 326538518
+      nurse walk_36: -1521968094
+      nurse walk_37: -1472761810
+      nurse walk_38: -1929973069
+      nurse walk_39: -627507222
+      nurse walk_4: -70413379
+      nurse walk_40: 1618718852
+      nurse walk_41: -265060121
+      nurse walk_42: -113107776
+      nurse walk_43: -1636962131
+      nurse walk_44: 924575969
+      nurse walk_45: 370819776
+      nurse walk_46: 93847214
+      nurse walk_47: -792640187
+      nurse walk_48: -1917344765
+      nurse walk_49: -1604904690
+      nurse walk_5: 875150563
+      nurse walk_50: -1733690453
+      nurse walk_51: -1380828622
+      nurse walk_52: -1594923821
+      nurse walk_6: -958972276
+      nurse walk_7: 1504774574
+      nurse walk_8: 457837003
+      nurse walk_9: 625749157
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

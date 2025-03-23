@@ -633,6 +633,63 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 18666128578645323, guid: 5051adff4d9383a488acfd40b4f7a35e, type: 3}
   m_PrefabInstance: {fileID: 2530747902390052746}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1614753552
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4562426068866158991, guid: d055525c772e155488589b661ddf5242, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.342297
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562426068866158991, guid: d055525c772e155488589b661ddf5242, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562426068866158991, guid: d055525c772e155488589b661ddf5242, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.2206135
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562426068866158991, guid: d055525c772e155488589b661ddf5242, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562426068866158991, guid: d055525c772e155488589b661ddf5242, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562426068866158991, guid: d055525c772e155488589b661ddf5242, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562426068866158991, guid: d055525c772e155488589b661ddf5242, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562426068866158991, guid: d055525c772e155488589b661ddf5242, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562426068866158991, guid: d055525c772e155488589b661ddf5242, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562426068866158991, guid: d055525c772e155488589b661ddf5242, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5672277748331494953, guid: d055525c772e155488589b661ddf5242, type: 3}
+      propertyPath: m_Name
+      value: DrugPickup
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d055525c772e155488589b661ddf5242, type: 3}
 --- !u!224 &1652638258 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6830831688560682054, guid: 68a7c48347f6a2a4aaa3daaea61d8369, type: 3}
@@ -2003,3 +2060,4 @@ SceneRoots:
   - {fileID: 3471513895642699047}
   - {fileID: 7559170167150974940}
   - {fileID: 2453183819424029446}
+  - {fileID: 1614753552}

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -16,11 +17,18 @@ public class Bullet : MonoBehaviour
 
         rb.AddForce(transform.forward * speed, ForceMode.Impulse);
 
-        Destroy(gameObject, timeToDie);
+        StartCoroutine(DestroyIfAliveTooLong());
+    }
+
+    IEnumerator DestroyIfAliveTooLong()
+    {
+        yield return new WaitForSeconds(timeToDie);
+        HitSomething();
     }
 
     public void HitSomething()
     {
+        GetComponentInChildren<EnvironmentObjectBehavior>().OnDisable();
         Destroy(gameObject);
     }
 
@@ -30,7 +38,10 @@ public class Bullet : MonoBehaviour
 
         if (!col.isTrigger || col.gameObject.GetComponent<Bullet>())
         {
-            HitSomething();
+            if (!col.gameObject.GetComponent<Enemy>())
+            {
+                HitSomething();
+            }
         }
     }
 }
