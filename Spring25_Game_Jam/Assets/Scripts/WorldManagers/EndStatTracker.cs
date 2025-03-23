@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EndStatTracker : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class EndStatTracker : MonoBehaviour
 
     [SerializeField] private int enemiesKilled = 0;
     [SerializeField] private float playerHealAmount = 2f;
+    public Button mainMenuButton;
     public TextMeshProUGUI killCountText;
     public Canvas endCanvas;
 
@@ -17,6 +19,7 @@ public class EndStatTracker : MonoBehaviour
     }
     private void Start()
     {
+        mainMenuButton.onClick.AddListener(GoToMenu);
         endCanvas.gameObject.SetActive(false);
     }
     public void AddEnemyKilled()
@@ -26,10 +29,15 @@ public class EndStatTracker : MonoBehaviour
     }
     public void PlayerIsDead()
     {
-        //end the game here!
-        //turn on end canvas
+        endCanvas.gameObject.SetActive(true);
+
+        killCountText.text = $"{enemiesKilled} killed";
+
         ESFXManager.instance.PlayEndScreenSting();
         MusicManager.instance.PlayEndLoop();
     }
-
+    public void GoToMenu()
+    {
+        SceneChangeHandler.instance.ChangeSceneByIndex(0);
+    }
 }

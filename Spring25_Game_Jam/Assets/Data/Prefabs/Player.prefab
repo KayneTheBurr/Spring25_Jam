@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8738371996342648197}
   - component: {fileID: 5636266813310856279}
+  - component: {fileID: 8804684032247058744}
+  - component: {fileID: 3939779570070583551}
   m_Layer: 6
   m_Name: PlayerCam
   m_TagString: Untagged
@@ -76,6 +78,35 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &8804684032247058744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3648796675529983121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9f57d6282560a4098a7e2398e3b23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3939779570070583551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3648796675529983121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NoiseProfile: {fileID: 0}
+  PivotOffset: {x: 0, y: 0, z: 0}
+  AmplitudeGain: 1
+  FrequencyGain: 1
+  m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &3672320599320917672
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,6 +502,10 @@ MonoBehaviour:
   vfxOffest: 1.75
   slamExtraOffset: 2
   slamDelayTime: 0.4
+  spinDamageRadius: 3
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
   lightAttack01_Damage: 5
   lightAttack02_Damage: 5
   lightAttack03_Damage: 10
@@ -483,6 +518,8 @@ MonoBehaviour:
   light_Attack_Back_02: Back_Light_Attack_02
   light_Attack_Back_03: Back_Light_Attack_03
   heavy_Attack_Back_01: Back_Heavy_Attack_01
+  currentChargingEffect: {fileID: 0}
+  currentSpinEffect: {fileID: 0}
 --- !u!114 &6704172199978753602
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -403,6 +403,8 @@ public class Enemy : MonoBehaviour
 
     public void DestroyEnemy()
     {
+        ParticleManager.instance.spawnParticles(ParticleManager.instance.particles[0], transform.position, Quaternion.identity, null);
+        SFXManager.instance.PlayConfettiExplosionSound();
         OnDisable();
         Destroy(gameObject);
     }

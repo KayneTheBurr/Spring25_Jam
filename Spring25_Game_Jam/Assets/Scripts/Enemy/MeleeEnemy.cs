@@ -23,6 +23,14 @@ public class MeleeEnemy : Enemy
     public override void SetAttackState()
     {
         spriteAnim.SetTrigger("attack");
+
+        DrugState worldState = WorldGameState.GetWorldState();
+        if (worldState == DrugState.Bouba) { SFXManager.instance.PlayBearHitSound(); }
+        else
+        {
+            // kiki shoot sound
+        }
+
         base.SetAttackState();
     }
 }
