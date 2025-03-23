@@ -35,6 +35,8 @@ public class EndStatTracker : MonoBehaviour
 
         ESFXManager.instance.PlayEndScreenSting();
         MusicManager.instance.PlayEndLoop();
+
+        //MenuSwapper.instance.SwapStateOnPlayerDeath();
     }
     public void GoToMenu()
     {
