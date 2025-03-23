@@ -62,6 +62,35 @@ public class PlayerCombatManager : MonoBehaviour
         }
 
         //use the facing direction to detect for enemies in that direction
+        Vector3 directionToAttack = Vector3.zero;
+        switch(direction)
+        {
+            case FacingDirection.Left:
+                directionToAttack = Vector3.left;
+                break;
+            case FacingDirection.BackLeft:
+                directionToAttack = new Vector3(-1,0,1);
+                break;
+            case FacingDirection.Back:
+                directionToAttack = Vector3.left;
+                break;
+            case FacingDirection.BackRight:
+                directionToAttack = new Vector3(-1, 0, 1);
+                break;
+            case FacingDirection.Right:
+                directionToAttack = Vector3.right;
+                break;
+            case FacingDirection.FrontRight:
+                directionToAttack = new Vector3(-1, 0, 1);
+                break;
+            case FacingDirection.Front:
+                directionToAttack = Vector3.back;
+                break;
+            case FacingDirection.FrontLeft:
+                directionToAttack = new Vector3(-1, 0, 1);
+                break;
+                
+        }
 
         //spawn a vfx prefab that direction using the Particle Manager 
 
