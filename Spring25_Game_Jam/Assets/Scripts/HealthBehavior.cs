@@ -81,6 +81,8 @@ public class HealthBehavior : MonoBehaviour
     {
         if (!isAlive) { return; }
 
+
+
         currentHealthPoints -= dmgAmount;
         // show hurt animations
 
@@ -94,6 +96,17 @@ public class HealthBehavior : MonoBehaviour
     {
         isAlive = false;
         GetComponent<Collider>().enabled = false;
+
+        if(GetComponent<Enemy>() != null)
+        {
+            //im an enemy, do enemy things
+            EndStatTracker.instance.AddEnemyKilled();
+        }
+        else if(GetComponent<PlayerManager>() != null)
+        {
+            //im the player, do player things
+            EndStatTracker.instance.PlayerIsDead();
+        }
 
         // set death animation
     }

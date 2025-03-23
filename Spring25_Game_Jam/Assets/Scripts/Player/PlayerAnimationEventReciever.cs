@@ -12,4 +12,5 @@ public class PlayerAnimationEventReciever : MonoBehaviour
     {
         player.playerCombatManager.EnableCanCombo();
     }
+    
 }
