@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ESFXManager : MonoBehaviour
 {
+    public static ESFXManager instance;
+
     // AudioSource to play the sounds. You can assign this in the Inspector.
     public AudioSource audioSource;
 
@@ -15,14 +17,10 @@ public class ESFXManager : MonoBehaviour
     // Single AudioClip for darkCircusAnnouncement.
     public AudioClip darkCircusAnnouncement;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
     }
 
     public void PlaySuccessSound()

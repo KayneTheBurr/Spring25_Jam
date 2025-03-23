@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0ef5b2502bad97c439ab181f9e457cea
+guid: 9cd1f3364404bfb499d903955c958d49
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 290
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fairy Lights_0
+      name: Barrel_Asset_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1005
-        width: 1513
-        height: 1005
+        x: 468
+        y: 620
+        width: 593
+        height: 877
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44cf7c6a1f2057a40b8a1a488e9973cf
-      internalID: -582718635
+      spriteID: c92032d7d9dd32546a881c904affbb1a
+      internalID: 761417467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fairy Lights_1
+      name: Barrel_Asset_1
       rect:
         serializedVersion: 2
-        x: 1508
-        y: 1005
-        width: 1496
-        height: 1005
+        x: 1557
+        y: 620
+        width: 593
+        height: 877
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,52 +147,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43f36cd6c712a91459e3e1ff07ad4aca
-      internalID: -1543062151
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fairy Lights_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1513
-        height: 1005
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41dace00d875feb4d8423386ea1c4ac0
-      internalID: 879789622
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fairy Lights_3
-      rect:
-        serializedVersion: 2
-        x: 1514
-        y: 0
-        width: 1496
-        height: 1005
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39d744f3d65d2a142940afa76607d187
-      internalID: 1743818278
+      spriteID: 59e8c4e5f9a76eb4798f7cb69ca23272
+      internalID: -445499804
       vertices: []
       indices: 
       edges: []
@@ -201,7 +157,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2df7423abcfc04045802c29b3041cf18
+    spriteID: bb87096e725504e419fbd7797aafb6fc
     internalID: 0
     vertices: []
     indices: 
@@ -211,10 +167,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fairy Lights_0: -582718635
-      Fairy Lights_1: -1543062151
-      Fairy Lights_2: 879789622
-      Fairy Lights_3: 1743818278
+      Barrel_Asset_0: 761417467
+      Barrel_Asset_1: -445499804
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

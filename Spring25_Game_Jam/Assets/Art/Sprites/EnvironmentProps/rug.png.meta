@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0ef5b2502bad97c439ab181f9e457cea
+guid: 341bf5fa9c707954aa3c90bd1649e254
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,57 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fairy Lights_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1005
-        width: 1513
-        height: 1005
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44cf7c6a1f2057a40b8a1a488e9973cf
-      internalID: -582718635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fairy Lights_1
-      rect:
-        serializedVersion: 2
-        x: 1508
-        y: 1005
-        width: 1496
-        height: 1005
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43f36cd6c712a91459e3e1ff07ad4aca
-      internalID: -1543062151
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fairy Lights_2
+      name: rug_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1513
-        height: 1005
+        width: 1799
+        height: 1733
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41dace00d875feb4d8423386ea1c4ac0
-      internalID: 879789622
+      spriteID: 98fb4642f9ad5ce45b10b07c429e9da6
+      internalID: 263039439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fairy Lights_3
+      name: rug_1
       rect:
         serializedVersion: 2
-        x: 1514
+        x: 1799
         y: 0
-        width: 1496
-        height: 1005
+        width: 1799
+        height: 1733
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,8 +147,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39d744f3d65d2a142940afa76607d187
-      internalID: 1743818278
+      spriteID: d9d990063e240fb40a2dbc4112942f82
+      internalID: -1224407061
       vertices: []
       indices: 
       edges: []
@@ -201,7 +157,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2df7423abcfc04045802c29b3041cf18
+    spriteID: 30e93553c4cba514a9a8aa6f7062add7
     internalID: 0
     vertices: []
     indices: 
@@ -211,10 +167,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fairy Lights_0: -582718635
-      Fairy Lights_1: -1543062151
-      Fairy Lights_2: 879789622
-      Fairy Lights_3: 1743818278
+      rug_0: 263039439
+      rug_1: -1224407061
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
