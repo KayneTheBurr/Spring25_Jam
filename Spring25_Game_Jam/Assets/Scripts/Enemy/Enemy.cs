@@ -57,6 +57,11 @@ public class Enemy : MonoBehaviour
     public float minAttackDistance;
     public float secondsToAttack;
 
+    [Header("Take DMG")]
+    public Material regularMaterial;
+    public Material hitMaterial;
+    public float secondsToShowTint = 0.2f;
+
     private void Awake()
     {
         spriteObj = transform.GetComponentInChildren<SpriteRenderer>().transform;
@@ -263,6 +268,20 @@ public class Enemy : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void TakeDamage()
+    {
+        StartCoroutine(ColorTint());
+    }
+
+    IEnumerator ColorTint()
+    {
+        spriteObj.GetComponent<SpriteRenderer>().material = hitMaterial;
+
+        yield return new WaitForSeconds(secondsToShowTint);
+
+        spriteObj.GetComponent<SpriteRenderer>().material = regularMaterial;
     }
 
     private void Die()

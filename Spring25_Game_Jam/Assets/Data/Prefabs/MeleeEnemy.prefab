@@ -124,6 +124,9 @@ MonoBehaviour:
   secondsToChargeUp: 1
   minAttackDistance: 2
   secondsToAttack: 0.4
+  regularMaterial: {fileID: 2100000, guid: 25d4f9ee1612cb74bb7b39e15b1afd30, type: 2}
+  hitMaterial: {fileID: 2100000, guid: 6714ecc3a07bc4549a3bb79a01190ee3, type: 2}
+  secondsToShowTint: 0.2
 --- !u!1 &5861347062581333423
 GameObject:
   m_ObjectHideFlags: 0
