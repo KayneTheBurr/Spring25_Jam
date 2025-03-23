@@ -24,6 +24,9 @@ public class PlayerAnimationEventReciever : MonoBehaviour
     {
         player.playerCombatManager.StartSpinEffect();
     }
-    
+    public void PlayTinkSound()
+    {
+        SFXManager.instance.PlayBigHitTink();
+    }
     
 }

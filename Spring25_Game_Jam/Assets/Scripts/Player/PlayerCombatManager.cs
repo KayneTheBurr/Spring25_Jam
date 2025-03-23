@@ -83,6 +83,17 @@ public class PlayerCombatManager : MonoBehaviour
         Debug.DrawLine(pointerDirection.position, pointerDirection.position + directionToAttack * attackRange, Color.red, 2f);
         RaycastHit[] enemiesHit = Physics.SphereCastAll(pointerDirection.position, attackRadius, directionToAttack, attackRange);
 
+        bool hitAtLeastOne = false;
+        foreach(var hit in enemiesHit)
+        {
+            if(hit.transform.GetComponent<Enemy>() != null)
+            {
+                hitAtLeastOne = true; return;
+            }
+        }
+
+        if (hitAtLeastOne) SFXManager.instance.PlayHitSound();
+
         foreach(var hit in enemiesHit)
         {
             HealthBehavior healthLogic = hit.transform.GetComponent<HealthBehavior>();
@@ -118,6 +129,7 @@ public class PlayerCombatManager : MonoBehaviour
     {
         currentChargingEffect = ParticleManager.instance.spawnParticleObject(ParticleManager.instance.particles[7],
             transform.position, Quaternion.identity, player.transform);
+        SFXManager.instance.PlayBigHitWindUp();
     }
     public void StartSpinEffect()
     {
@@ -125,6 +137,10 @@ public class PlayerCombatManager : MonoBehaviour
         {
             currentSpinEffect = ParticleManager.instance.spawnParticleObject(ParticleManager.instance.vfx[0],
                 transform.position, Quaternion.identity, player.transform);
+        }
+        if(!SFXManager.instance.audioSource.isPlaying)
+        {
+            SFXManager.instance.PlayBigHitSpin();
         }
     }
     

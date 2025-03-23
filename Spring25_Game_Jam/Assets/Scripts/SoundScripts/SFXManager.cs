@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SFXManager : MonoBehaviour
 {
+    public static SFXManager instance;
     // AudioSource to play the sounds. You can assign this in the Inspector.
     public AudioSource audioSource;
 
@@ -10,9 +11,6 @@ public class SFXManager : MonoBehaviour
 
     // Array of hit sounds to choose from.
     public AudioClip[] drugPickUpSounds;
-
-
-
 
     // The big hit sound clip to play.
     public AudioClip bigHitWindUp;
@@ -29,6 +27,11 @@ public class SFXManager : MonoBehaviour
     public AudioClip footstep1;
     public AudioClip footstep2;
     public AudioClip footstep3;
+    private void Awake()
+    {
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
+    }
 
     // This method is called to play a hit sound.
     public void PlayHitSound()
@@ -181,6 +184,7 @@ public class SFXManager : MonoBehaviour
     {
         if (bigHitSpin != null)
         {
+
             audioSource.PlayOneShot(bigHitSpin);
         }
         else

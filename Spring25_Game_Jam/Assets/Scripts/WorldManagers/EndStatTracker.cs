@@ -22,6 +22,9 @@ public class EndStatTracker : MonoBehaviour
     public void PlayerIsDead()
     {
         //end the game here!
+        //turn on end canvas
+        ESFXManager.instance.PlayEndScreenSting();
+        MusicManager.instance.PlayEndLoop();
     }
 
 }

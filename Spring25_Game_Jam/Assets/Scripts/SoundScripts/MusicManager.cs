@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-
+    public static MusicManager instance;
     // AudioSource to play the sounds. You can assign this in the Inspector.
     public AudioSource audioSource;
 
@@ -12,6 +12,11 @@ public class MusicManager : MonoBehaviour
     public AudioClip mainMenu;
     public AudioClip menuKiki;
 
+    private void Awake()
+    {
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
+    }
     public void PlayBoubaSongs()
     {
         if (boubaSongs.Length == 0)
