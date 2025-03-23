@@ -1,13 +1,21 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerCombatManager : MonoBehaviour
 {
     PlayerManager player;
 
+    [Header("Flags")]
     public bool canCombo = false;
-
     public bool isChargingAttack = false;
 
+    [Header("Attack Values")]
+    public float attackRadius = 5f;
+    public float attackRange = 5f;
+    public float vfxOffest = 2f;
+    public float slamExtraOffset = 2f;
+    public float slamDelayTime = 2;
+        
     [Header("Attack Damage Values")]
     public float lightAttack01_Damage;
     public float lightAttack02_Damage;
@@ -38,6 +46,7 @@ public class PlayerCombatManager : MonoBehaviour
     {
         FacingDirection direction = player.GetPointerDirection();
         float damageDone = 0;
+        
 
         //determnine the damage of the hit based on the attackAnim string passed in 
         if(attackAnim == light_Attack_Back_01 || attackAnim == light_Attack_Front_01)
@@ -62,42 +71,42 @@ public class PlayerCombatManager : MonoBehaviour
         }
 
         //use the facing direction to detect for enemies in that direction
-        Vector3 directionToAttack = Vector3.zero;
-        switch(direction)
+        Transform pointerDirection = player.attackDirection;
+        Vector3 directionToAttack = pointerDirection.forward;
+
+        Debug.DrawLine(pointerDirection.position, pointerDirection.position + directionToAttack * attackRange, Color.red, 2f);
+        RaycastHit[] enemiesHit = Physics.SphereCastAll(pointerDirection.position, attackRadius, directionToAttack, attackRange);
+
+        foreach(var hit in enemiesHit)
         {
-            case FacingDirection.Left:
-                directionToAttack = Vector3.left;
-                break;
-            case FacingDirection.BackLeft:
-                directionToAttack = new Vector3(-1,0,1);
-                break;
-            case FacingDirection.Back:
-                directionToAttack = Vector3.left;
-                break;
-            case FacingDirection.BackRight:
-                directionToAttack = new Vector3(-1, 0, 1);
-                break;
-            case FacingDirection.Right:
-                directionToAttack = Vector3.right;
-                break;
-            case FacingDirection.FrontRight:
-                directionToAttack = new Vector3(-1, 0, 1);
-                break;
-            case FacingDirection.Front:
-                directionToAttack = Vector3.back;
-                break;
-            case FacingDirection.FrontLeft:
-                directionToAttack = new Vector3(-1, 0, 1);
-                break;
-                
+            HealthBehavior healthLogic = hit.transform.GetComponent<HealthBehavior>();
+            if(healthLogic != null)
+            {
+                healthLogic.TakeDMG(damageDone);
+            }
+        }
+        //spawn a vfx prefab that direction using the Particle Manager 
+        if (attackAnim == light_Attack_Back_01 || attackAnim == light_Attack_Front_01
+            || attackAnim == light_Attack_Back_02 || attackAnim == light_Attack_Front_02)
+        {
+            ParticleManager.instance.spawnParticles(ParticleManager.instance.particles[4],
+            pointerDirection.position + directionToAttack * vfxOffest, Quaternion.LookRotation(directionToAttack), player.transform);
         }
 
-        //spawn a vfx prefab that direction using the Particle Manager 
+        if (attackAnim == light_Attack_Back_03 || attackAnim == light_Attack_Front_03)
+        {
+            StartCoroutine(PlaySlamEffect(pointerDirection, directionToAttack));
+        }
 
         //Play a sfx depending on what attack was used
 
+    }
+    public IEnumerator PlaySlamEffect(Transform pointerDirection, Vector3 directionToAttack)
+    {
+        yield return new WaitForSeconds(slamDelayTime);
 
-
+        ParticleManager.instance.spawnParticles(ParticleManager.instance.particles[6],
+            pointerDirection.position + directionToAttack * (vfxOffest + slamExtraOffset), Quaternion.LookRotation(directionToAttack), player.transform);
     }
     private void Update()
     {
@@ -260,5 +269,9 @@ public class PlayerCombatManager : MonoBehaviour
     public void DisableCanCombo()
     {
         canCombo &= false;
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position,attackRadius);
     }
 }

@@ -174,7 +174,7 @@ Transform:
   m_GameObject: {fileID: 5423371361602281870}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.05, z: 0}
+  m_LocalPosition: {x: 0, y: -0.26, z: -0.52}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -426,6 +426,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
   characterController: {fileID: 0}
+  healthBehavior: {fileID: 0}
   canMove: 1
   isPerformingAction: 0
   isDead: 0
@@ -465,10 +466,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canCombo: 0
   isChargingAttack: 0
-  lightAttack01_Damage: 0
-  lightAttack02_Damage: 0
-  lightAttack03_Damage: 0
-  heavyAttack_01_Damage: 0
+  attackRadius: 1
+  attackRange: 5
+  vfxOffest: 1.75
+  slamExtraOffset: 2
+  slamDelayTime: 0.4
+  lightAttack01_Damage: 5
+  lightAttack02_Damage: 5
+  lightAttack03_Damage: 10
+  heavyAttack_01_Damage: 10
   light_Attack_Front_01: Front_Light_Attack_01
   light_Attack_Front_02: Front_Light_Attack_02
   light_Attack_Front_03: Front_Light_Attack_03
