@@ -465,6 +465,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canCombo: 0
   isChargingAttack: 0
+  lightAttack01_Damage: 0
+  lightAttack02_Damage: 0
+  lightAttack03_Damage: 0
+  heavyAttack_01_Damage: 0
   light_Attack_Front_01: Front_Light_Attack_01
   light_Attack_Front_02: Front_Light_Attack_02
   light_Attack_Front_03: Front_Light_Attack_03
