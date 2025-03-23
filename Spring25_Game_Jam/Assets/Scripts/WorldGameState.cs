@@ -66,6 +66,7 @@ public class WorldGameState : MonoBehaviour
         worldState = drugState;
         if (worldState == DrugState.Bouba) //if goes to bouba
         {
+            PostProcessingManager.instance.kikiToBouba();
             ESFXManager.instance.PlayKikiToBoubaSound();
             MusicManager.instance.PlayBoubaSongs();
             warningPlayed = false;
@@ -73,6 +74,7 @@ public class WorldGameState : MonoBehaviour
         }
         else //if goes to kiki 
         {
+            PostProcessingManager.instance.boubaToKiki();
             ESFXManager.instance.PlayBoubaToKikiSound();
             MusicManager.instance.PlayKikiLoop();
             warningPlayed = false;

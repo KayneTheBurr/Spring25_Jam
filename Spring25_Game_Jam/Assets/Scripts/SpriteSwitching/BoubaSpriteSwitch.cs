@@ -2,20 +2,10 @@ using UnityEngine;
 
 public class BoubaSpriteSwitch : MonoBehaviour
 {
-    private void OnEnable()
+    private void Start()
     {
-        WorldGameState.worldStateChanged += UpdateVisibility;
-        UpdateVisibility(); // Sync on start
-    }
+        gameObject.SetActive(!MenuSwapper.instance.GetKiki());
 
-    private void OnDisable()
-    {
-        WorldGameState.worldStateChanged -= UpdateVisibility;
-    }
-
-    private void UpdateVisibility()
-    {
-        // Enable only if the current world state is Bouba
-        gameObject.SetActive(WorldGameState.GetWorldState() == DrugState.Bouba);
+        if (isActiveAndEnabled) MusicManager.instance.PlayMainMenu();
     }
 }
