@@ -19,13 +19,13 @@ public class SceneChangeHandler : MonoBehaviour
         }
     }
 
-    public static void ChangeSceneByName(string sceneName)
+    public void ChangeSceneByName(string sceneName)
     {
         onSceneChange?.Invoke();
         SceneManager.LoadScene(sceneName);
     }
 
-    public static void ChangeSceneByIndex(int sceneIndex)
+    public void ChangeSceneByIndex(int sceneIndex)
     {
         onSceneChange?.Invoke();
         SceneManager.LoadScene(sceneIndex);

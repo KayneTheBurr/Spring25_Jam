@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,7 +115,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 1005
-        width: 3010
+        width: 1513
         height: 1005
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -135,9 +135,9 @@ TextureImporter:
       name: Fairy Lights_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3010
+        x: 1508
+        y: 1005
+        width: 1496
         height: 1005
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -149,6 +149,50 @@ TextureImporter:
       bones: []
       spriteID: 43f36cd6c712a91459e3e1ff07ad4aca
       internalID: -1543062151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fairy Lights_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1513
+        height: 1005
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41dace00d875feb4d8423386ea1c4ac0
+      internalID: 879789622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fairy Lights_3
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 0
+        width: 1496
+        height: 1005
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d744f3d65d2a142940afa76607d187
+      internalID: 1743818278
       vertices: []
       indices: 
       edges: []
@@ -169,6 +213,8 @@ TextureImporter:
     nameFileIdTable:
       Fairy Lights_0: -582718635
       Fairy Lights_1: -1543062151
+      Fairy Lights_2: 879789622
+      Fairy Lights_3: 1743818278
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
