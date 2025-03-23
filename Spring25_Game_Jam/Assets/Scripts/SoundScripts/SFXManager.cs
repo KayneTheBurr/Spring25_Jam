@@ -17,7 +17,7 @@ public class SFXManager : MonoBehaviour
     // The big hit sound clip to play.
     public AudioClip bigHitWindUp;
     public AudioClip bigHitTink;
-    public AudioClip bigHitSpin;
+    public AudioClip[] bigHitSpin;
 
     // Array of hit sounds to choose from.
     public AudioClip[] bigHitSounds;
@@ -179,13 +179,18 @@ public class SFXManager : MonoBehaviour
 
     public void PlayBigHitSpin()
     {
-        if (bigHitSpin != null)
+        // Ensure we have some sounds.
+        if (bigHitSpin.Length == 0)
         {
-            audioSource.PlayOneShot(bigHitSpin);
+            Debug.LogWarning("No bigHitSpin assigned in SFXManager!");
+            return;
         }
-        else
-        {
-            Debug.LogWarning("bigHitSpin AudioClip is not assigned in SFXManager!");
-        }
+
+        // Choose a random hit sound from the array.
+        int randomIndex = Random.Range(0, bigHitSpin.Length);
+        AudioClip selectedClip = bigHitSpin[randomIndex];
+
+        // Play the chosen sound using the AudioSource.
+        audioSource.PlayOneShot(selectedClip);
     }
 }

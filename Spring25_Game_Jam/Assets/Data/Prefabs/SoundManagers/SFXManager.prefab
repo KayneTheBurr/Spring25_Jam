@@ -59,7 +59,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5907a5cd229bb6043a1bca106da5291b, type: 3}
   bigHitWindUp: {fileID: 8300000, guid: 430dcff8f36fa0d4fb7aeaae93a77652, type: 3}
   bigHitTink: {fileID: 8300000, guid: 157075236a49bf54896b6547cbfaf943, type: 3}
-  bigHitSpin: {fileID: 8300000, guid: ea9dca2c4c770d9489a18d8e7de62ac8, type: 3}
+  bigHitSpin:
+  - {fileID: 8300000, guid: c393103b174073a489d5960d3cacb585, type: 3}
+  - {fileID: 8300000, guid: ac84e0eb6f548874b951f560e3f0ab9c, type: 3}
+  - {fileID: 8300000, guid: f0a4283d88759314bba676816a9e9fc0, type: 3}
+  - {fileID: 8300000, guid: 157eead5bde12e443b431d26ca128f1f, type: 3}
   bigHitSounds:
   - {fileID: 8300000, guid: 86ed0837b4b2f30498a5c3e4b5389d9e, type: 3}
   - {fileID: 8300000, guid: 959324c9b44085845a776478268e0b19, type: 3}
