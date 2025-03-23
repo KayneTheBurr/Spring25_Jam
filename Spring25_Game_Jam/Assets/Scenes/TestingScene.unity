@@ -26,16 +26,16 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
-  m_DefaultReflectionMode: 1
+  m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 0
+  m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_UseRadianceAmbientProbe: 0
@@ -50570,6 +50570,10 @@ PrefabInstance:
     - target: {fileID: 2763812921425729378, guid: 6a43afb3d1b8ed84bb5c6f3709c99f5b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5429807869707169507, guid: 6a43afb3d1b8ed84bb5c6f3709c99f5b, type: 3}
+      propertyPath: kikiLightIntensity
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5710296784574984414, guid: 6a43afb3d1b8ed84bb5c6f3709c99f5b, type: 3}
       propertyPath: m_LocalPosition.x
