@@ -28,13 +28,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216499385707038355}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.46193978, y: 0.19134173, z: 0.19134173, w: 0.84462327}
-  m_LocalPosition: {x: -5.9408455, y: 0.9100001, z: 0.6441622}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.66, y: 0.66, z: 0.66}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 45, y: 45, z: 45}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2056699146341047782
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -121,9 +121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30281b06ebe8e464281a7693955d3d34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drugPrefab: {fileID: 92165555548458962, guid: d84e1847545e83e488a30d3cfb9ae3de, type: 3}
+  drugPrefab: {fileID: 5672277748331494953, guid: d055525c772e155488589b661ddf5242, type: 3}
   canSpawn: 1
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  radiusCheck: 20
+  radiusCheck: 5

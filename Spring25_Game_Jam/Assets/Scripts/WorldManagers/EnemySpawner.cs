@@ -1,9 +1,10 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    // Enemy prefab
-    public GameObject enemyPrefab;
+    [SerializeField] public List<GameObject> enemies = new List<GameObject>();
 
     // Bool to allow spawning.
     public bool canSpawn = true;
@@ -17,29 +18,16 @@ public class EnemySpawner : MonoBehaviour
     // Instantiates an enemy at this location
     public void SpawnEnemy()
     {
+        int randomNumber = Random.Range(0, enemies.Count);
         // Instantiate enemyPrefab at the spawner's position and rotation.
-        Instantiate(enemyPrefab, transform.position, transform.rotation);
+        Instantiate(enemies[randomNumber], transform.position, transform.rotation);
     }
-
     public void CheckForPlayer()
     {
         // Check for any collissions with the player layer within the radius.
         Collider[] colliders = Physics.OverlapSphere(transform.position, radiusCheck, playerLayer);
         canSpawn = colliders.Length == 0; // If no player colliders, then canSpawn is true.
     }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

@@ -16,6 +16,7 @@ public class PlayerCombatManager : MonoBehaviour
     public float slamExtraOffset = 2f;
     public float slamDelayTime = 2;
     public float spinDamageRadius = 3f;
+    public LayerMask enemyLayer;
         
     [Header("Attack Damage Values")]
     public float lightAttack01_Damage;
@@ -45,6 +46,19 @@ public class PlayerCombatManager : MonoBehaviour
     private void Awake()
     {
         player = GetComponent<PlayerManager>();
+    }
+    public void TakeDamage()
+    {
+        if (WorldGameState.GetWorldState() == DrugState.Kikki)
+        {
+            ParticleManager.instance.spawnParticles(ParticleManager.instance.particles[2],
+                transform.position, Quaternion.identity, player.transform);
+        }
+        else if (WorldGameState.GetWorldState() == DrugState.Bouba)
+        {
+            ParticleManager.instance.spawnParticles(ParticleManager.instance.particles[1],
+                transform.position, Quaternion.identity, player.transform);
+        }
     }
     private void DealDamage(string attackAnim)
     {
@@ -101,6 +115,8 @@ public class PlayerCombatManager : MonoBehaviour
             HealthBehavior healthLogic = hit.transform.GetComponent<HealthBehavior>();
             if(healthLogic != null)
             {
+                if (hit.transform.GetComponent<PlayerManager>() != null) break;
+
                 healthLogic.TakeDMG(damageDone);
             }
         }
@@ -109,7 +125,7 @@ public class PlayerCombatManager : MonoBehaviour
         if (attackAnim == light_Attack_Back_01 || attackAnim == light_Attack_Front_01
             || attackAnim == light_Attack_Back_02 || attackAnim == light_Attack_Front_02)
         {
-            Debug.Log("Spawn vfx");
+            //Debug.Log("Spawn vfx");
 
             ParticleManager.instance.spawnParticles(ParticleManager.instance.particles[4],
             pointerDirection.position + directionToAttack * vfxOffest, Quaternion.LookRotation(directionToAttack), player.transform);
@@ -123,6 +139,8 @@ public class PlayerCombatManager : MonoBehaviour
     public IEnumerator PlaySlamEffect(Transform pointerDirection, Vector3 directionToAttack)
     {
         yield return new WaitForSeconds(slamDelayTime);
+
+        ScreenShake.instance.shakeCam(2, .1f);
 
         ParticleManager.instance.spawnParticles(ParticleManager.instance.particles[6],
             pointerDirection.position + directionToAttack * (vfxOffest + slamExtraOffset), Quaternion.LookRotation(directionToAttack), player.transform);
@@ -147,11 +165,14 @@ public class PlayerCombatManager : MonoBehaviour
     }
     public void DealSpinDamage()
     {
-        Collider[] hitEnemies = Physics.OverlapSphere(player.transform.position, spinDamageRadius, 7);
-        foreach(var enemy in hitEnemies)
+        Collider[] hitEnemies = Physics.OverlapSphere(player.transform.position, spinDamageRadius, enemyLayer);
+        Debug.Log(hitEnemies.Length);
+        foreach (var enemy in hitEnemies)
         {
-            if(enemy.GetComponent<Enemy>() != null)
+            Debug.Log(enemy + "test 1");
+            if (enemy.GetComponent<Enemy>() != null)
             {
+                Debug.Log(enemy + "test 2");
                 enemy.GetComponent<HealthBehavior>().TakeDMG(heavyAttack_01_Damage);
             }
         }
@@ -200,26 +221,26 @@ public class PlayerCombatManager : MonoBehaviour
 
                 if (player.playerAnimationManager.lastAnimation == light_Attack_Back_01 || player.playerAnimationManager.lastAnimation == light_Attack_Front_01)
                 {
-                    Debug.Log("Play second attack front here");
+                    //Debug.Log("Play second attack front here");
                     player.playerAnimationManager.PlayTargetAnimation(light_Attack_Front_02, true);
                     DealDamage(light_Attack_Front_02);
                 }
                 else if (player.playerAnimationManager.lastAnimation == light_Attack_Back_02 || player.playerAnimationManager.lastAnimation == light_Attack_Front_02)
                 {
-                    Debug.Log("Play third attack front here");
+                    //Debug.Log("Play third attack front here");
                     player.playerAnimationManager.PlayTargetAnimation(light_Attack_Front_03, true);
                     DealDamage(light_Attack_Front_03);
                 }
                 else if (player.playerAnimationManager.lastAnimation == light_Attack_Back_03 || player.playerAnimationManager.lastAnimation == light_Attack_Front_03)
                 {
-                    Debug.Log("Play first attack front here");
+                    //Debug.Log("Play first attack front here");
                     player.playerAnimationManager.PlayTargetAnimation(light_Attack_Front_01, true);
                     DealDamage(light_Attack_Front_01);
                 }
             }
             else if (!player.isPerformingAction)
             {
-                Debug.Log("Start attack chain front ");
+                //Debug.Log("Start attack chain front ");
                 player.playerAnimationManager.PlayTargetAnimation(light_Attack_Front_01, true);
                 DealDamage(light_Attack_Front_01);
 
@@ -235,21 +256,21 @@ public class PlayerCombatManager : MonoBehaviour
 
                 if (player.playerAnimationManager.lastAnimation == light_Attack_Back_01 || player.playerAnimationManager.lastAnimation == light_Attack_Front_01)
                 {
-                    Debug.Log("Play second attack back here");
+                    //Debug.Log("Play second attack back here");
                     player.playerAnimationManager.PlayTargetAnimation(light_Attack_Back_02, true);
                     DealDamage(light_Attack_Back_02);
 
                 }
                 else if (player.playerAnimationManager.lastAnimation == light_Attack_Back_02 || player.playerAnimationManager.lastAnimation == light_Attack_Front_02)
                 {
-                    Debug.Log("Play third attack back here");
+                    //Debug.Log("Play third attack back here");
                     player.playerAnimationManager.PlayTargetAnimation(light_Attack_Back_03, true);
                     DealDamage(light_Attack_Back_03);
 
                 }
                 else if (player.playerAnimationManager.lastAnimation == light_Attack_Back_03 || player.playerAnimationManager.lastAnimation == light_Attack_Front_03)
                 {
-                    Debug.Log("Play first attack back here");
+                    //Debug.Log("Play first attack back here");
                     player.playerAnimationManager.PlayTargetAnimation(light_Attack_Back_01, true);
                     DealDamage(light_Attack_Back_01);
 
@@ -257,7 +278,7 @@ public class PlayerCombatManager : MonoBehaviour
             }
             else if (!player.isPerformingAction)
             {
-                Debug.Log("Start attack chain back");
+                //Debug.Log("Start attack chain back");
                 player.playerAnimationManager.PlayTargetAnimation(light_Attack_Back_01, true);
                 DealDamage(light_Attack_Back_01);
 
@@ -269,7 +290,7 @@ public class PlayerCombatManager : MonoBehaviour
     {
         if(isChargingAttack)
         {
-            Debug.Log("charging attack");
+            
             player.animator.SetBool("IsCharging", true);
         }
         else
@@ -304,7 +325,7 @@ public class PlayerCombatManager : MonoBehaviour
         {
             if (!player.isPerformingAction)
             {
-                Debug.Log("Play heavy attack front");
+                //Debug.Log("Play heavy attack front");
                 player.playerAnimationManager.PlayTargetAnimation(heavy_Attack_Front_01, true);
                 DealDamage(heavy_Attack_Front_01);
             }

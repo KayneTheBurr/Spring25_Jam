@@ -11,10 +11,7 @@ public class DrugSpawnManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            SpawnDrugs();
-        }
+        
     }
     void Start()
     {
