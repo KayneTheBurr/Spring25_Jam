@@ -14,8 +14,15 @@ public class MeleeEnemy : Enemy
         base.Update();
     }
 
-    public override void AttackUpdate()
+    public override void SetChargeUpState()
     {
-        base.AttackUpdate();
+        spriteAnim.SetTrigger("charge");
+        base.SetChargeUpState();
+    }
+
+    public override void SetAttackState()
+    {
+        spriteAnim.SetTrigger("attack");
+        base.SetAttackState();
     }
 }

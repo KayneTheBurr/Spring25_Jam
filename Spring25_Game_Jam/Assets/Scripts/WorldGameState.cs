@@ -7,11 +7,15 @@ public class WorldGameState : MonoBehaviour
     public static event Action worldStateChanged;
     private static DrugState worldState = DrugState.Bouba;
 
-    public static float secondsInBouba = 10f;
+    [SerializeField] private float secondsInBouba = 10f;
     public static float boubaTimer;
+
+    [SerializeField] private float extraBoubaTimeRound1 = 30f;
 
     private void Start()
     {
+        secondsInBouba += extraBoubaTimeRound1;
+
         ChangeWorldState(DrugState.Bouba);
     }
 

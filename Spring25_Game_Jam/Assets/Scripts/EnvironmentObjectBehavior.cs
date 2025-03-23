@@ -13,16 +13,19 @@ public class EnvironmentObjectBehavior : MonoBehaviour
     {
         sp = GetComponent<SpriteRenderer>();
         OnEnable();
+        ChangeSprite();
     }
 
     public void OnEnable()
     {
         WorldGameState.worldStateChanged += ChangeSprite;
+        SceneChangeHandler.onSceneChange += OnDisable;
     }
 
     public void OnDisable()
     {
         WorldGameState.worldStateChanged -= ChangeSprite;
+        SceneChangeHandler.onSceneChange -= OnDisable;
     }
 
     public void ChangeSprite()

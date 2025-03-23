@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Net;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -25,6 +26,8 @@ public class Enemy : MonoBehaviour
     public float damage;
     private Transform playerTransform;
     public float dmgFromHitbox = 5f;
+    private Transform spriteObj;
+    public Animator spriteAnim;
 
     [Header("Idle State")]
     public float maxIdleTime;
@@ -34,6 +37,7 @@ public class Enemy : MonoBehaviour
     [Header("Alerted State")]
     public float timeSpentAlert;
     public float maxSightRange;
+    private Coroutine alertedRoutine;
 
     [Header("Patrol State")]
     public float minPatrolDistance;
@@ -42,27 +46,36 @@ public class Enemy : MonoBehaviour
     public float minDistanceToTarget = 0.1f;
 
     [Header("Runaway State")]
-    
+
 
     [Header("Follow State")]
-    
+
+    [Header("Charge Up State")]
+    public float secondsToChargeUp;
 
     [Header("Attack State")]
     public float minAttackDistance;
+    public float secondsToAttack;
 
     private void Awake()
     {
+        spriteObj = transform.GetComponentInChildren<SpriteRenderer>().transform;
+        spriteAnim = transform.GetComponentInChildren<Animator>();
+
+        agent = GetComponent<NavMeshAgent>();
+
         OnEnable();
     }
 
     public virtual void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
         agent.speed = speed;
 
         playerTransform = FindFirstObjectByType<PlayerMovementManager>().gameObject.transform;
 
         SetState(EnemyStates.IDLE);
+
+        OnGameStateChanged();
     }
 
     public virtual void Update()
@@ -71,7 +84,7 @@ public class Enemy : MonoBehaviour
         {
             case EnemyStates.IDLE:
                 IdleUpdate();
-                if (GetDistanceFromPlayer() <= maxSightRange)
+                if (GetDistanceFromPlayer() < maxSightRange)
                 {
                     SetState(EnemyStates.ALERTED);
                 }
@@ -80,7 +93,7 @@ public class Enemy : MonoBehaviour
                 break;
             case EnemyStates.PATROL:
                 PatrolUpdate();
-                if (GetDistanceFromPlayer() <= maxSightRange)
+                if (GetDistanceFromPlayer() < maxSightRange)
                 {
                     SetState(EnemyStates.ALERTED);
                 }
@@ -103,6 +116,8 @@ public class Enemy : MonoBehaviour
                 Debug.Log("State doesn't exist in enemy, add it to the enum.");
                 break;
         }
+
+        SetVisuals();
     }
 
     #region Listeners
@@ -110,11 +125,13 @@ public class Enemy : MonoBehaviour
     public void OnEnable()
     {
         WorldGameState.worldStateChanged += OnGameStateChanged;
+        SceneChangeHandler.onSceneChange += OnDisable;
     }
 
     public void OnDisable()
     {
         WorldGameState.worldStateChanged -= OnGameStateChanged;
+        SceneChangeHandler.onSceneChange -= OnDisable;
     }
 
     public void OnGameStateChanged()
@@ -124,12 +141,14 @@ public class Enemy : MonoBehaviour
         switch (gameState)
         {
             case DrugState.Kikki:
+                spriteAnim.SetFloat("worldState", 0);
                 if(enemyState == EnemyStates.RUNAWAY)
                 {
                     SetState(EnemyStates.ALERTED);
                 }
                 break;
             case DrugState.Bouba:
+                spriteAnim.SetFloat("worldState", 1);
                 if (enemyState == EnemyStates.FOLLOW)
                 {
                     SetState(EnemyStates.ALERTED);
@@ -143,6 +162,22 @@ public class Enemy : MonoBehaviour
 
     #endregion
 
+    //called in update
+    private void SetVisuals()
+    {
+        // going left
+        if(transform.forward.x < 0)
+        {
+            spriteObj.localScale = new Vector3(-1, 1, 1);
+        }
+        else if(transform.forward.x > 0) //going right
+        {
+            spriteObj.localScale = new Vector3(1, 1, 1);
+        }
+
+        spriteAnim.SetBool("isMoving", agent.velocity != Vector3.zero);
+    }
+
     public void SetState(EnemyStates newEnemyState)
     {
         enemyState = newEnemyState;
@@ -153,7 +188,10 @@ public class Enemy : MonoBehaviour
                 idleTime = Random.Range(minIdleTime, maxIdleTime);
                 break;
             case EnemyStates.ALERTED:
-                StartCoroutine(AlertEnemy());
+                if(alertedRoutine == null)
+                {
+                    alertedRoutine = StartCoroutine(AlertEnemy());
+                }
                 break;
             case EnemyStates.PATROL:
                 if (!FindRandomPatrolPointOnNavMesh()) { SetState(EnemyStates.IDLE); }
@@ -163,6 +201,7 @@ public class Enemy : MonoBehaviour
             case EnemyStates.FOLLOW:
                 break;
             case EnemyStates.CHARGEUP:
+                SetChargeUpState();
                 break;
             case EnemyStates.ATTACK:
                 SetAttackState();
@@ -180,25 +219,30 @@ public class Enemy : MonoBehaviour
     {
         // play alert animation
         agent.SetDestination(transform.position);
+        spriteAnim.SetTrigger("alerted");
 
         yield return new WaitForSeconds(timeSpentAlert);
 
         // check if in bouba or kiki
         // set to either follow or runaway
 
-        if(WorldGameState.GetWorldState() == DrugState.Kikki)
+        DrugState worldState = WorldGameState.GetWorldState();
+
+        switch (worldState)
         {
-            SetState(EnemyStates.FOLLOW);
+            case DrugState.Bouba:
+                SetState(EnemyStates.RUNAWAY);
+                break;
+            case DrugState.Kikki:
+                SetState(EnemyStates.FOLLOW);
+                break;
+            default:
+                Debug.Log("No world game state.");
+                SetState(EnemyStates.IDLE);
+                break;
         }
-        else if(WorldGameState.GetWorldState() == DrugState.Bouba)
-        {
-            SetState(EnemyStates.RUNAWAY);
-        }
-        else
-        {
-            Debug.Log("No world game state.");
-            SetState(EnemyStates.IDLE);
-        }
+
+        alertedRoutine = null;
     }
 
     private bool FindRandomPatrolPointOnNavMesh()
@@ -311,16 +355,21 @@ public class Enemy : MonoBehaviour
 
     public void ChargeUpUpdate()
     {
-        agent.SetDestination(transform.position);
-        // charge up animation
+        
+    }
 
-        //temp
-        EndChargeUpState();
+    public virtual void SetChargeUpState()
+    {
+        StartCoroutine(EndChargeUpState());
     }
 
     // called from charge up animation
-    public void EndChargeUpState()
+    IEnumerator EndChargeUpState()
     {
+        agent.SetDestination(transform.position);
+
+        yield return new WaitForSeconds(secondsToChargeUp);
+
         SetState(EnemyStates.ATTACK);
     }
 
@@ -331,15 +380,14 @@ public class Enemy : MonoBehaviour
 
     public virtual void SetAttackState()
     {
-        // attack animation
-
-        //temp
-        EndAttackState();
+        StartCoroutine(EndAttackState());
     }
 
     // called from attack animation
-    public void EndAttackState()
+    IEnumerator EndAttackState()
     {
+        yield return new WaitForSeconds(secondsToAttack);
+
         SetState(EnemyStates.IDLE);
     }
 
@@ -351,6 +399,12 @@ public class Enemy : MonoBehaviour
     {
         float distance = Vector3.Distance(playerTransform.position, this.transform.position);
         return distance;
+    }
+
+    public void DestroyEnemy()
+    {
+        OnDisable();
+        Destroy(gameObject);
     }
 
     #endregion
