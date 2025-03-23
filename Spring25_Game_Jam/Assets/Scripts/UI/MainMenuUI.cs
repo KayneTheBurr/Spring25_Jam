@@ -25,9 +25,10 @@ public class MainMenuUI : MonoBehaviour
         SceneManager.LoadScene("00_Controls");
     }
 
-    public void SeeCredits()
+    public void Quit()
     {
-        SceneManager.LoadScene("000_Credits");
+        // Quit the game (this will work in a built application)
+        Application.Quit();
     }
 }
 

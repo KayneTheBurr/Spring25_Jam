@@ -1452,7 +1452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boubaSprite: {fileID: -582718635, guid: 0ef5b2502bad97c439ab181f9e457cea, type: 3}
-  kikiSprite: {fileID: -1543062151, guid: 0ef5b2502bad97c439ab181f9e457cea, type: 3}
+  kikiSprite: {fileID: 879789622, guid: 0ef5b2502bad97c439ab181f9e457cea, type: 3}
   kikiMoodLight: {fileID: 0}
 --- !u!95 &5335487098924491852
 Animator:
