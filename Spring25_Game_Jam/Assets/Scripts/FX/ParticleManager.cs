@@ -7,6 +7,7 @@ public class ParticleManager : MonoBehaviour
     public static ParticleManager instance { get; private set; }
 
     public List<GameObject> particles = new List<GameObject>();
+    public List<GameObject> vfx = new List<GameObject>();
 
     private void Awake()
     {
@@ -21,14 +22,14 @@ public class ParticleManager : MonoBehaviour
         }
     }
 
-    public void spawnParticles(GameObject prefab, Vector3 pos, Quaternion rot)
+    public void spawnParticles(GameObject prefab, Vector3 pos, Quaternion rot, Transform parent)
     {
-        GameObject newParticles = Instantiate(prefab, pos, rot);
+        GameObject newParticles = Instantiate(prefab, pos, rot, parent);
     }
 
-    public void spawnVFX(GameObject prefab, Vector3 pos, Quaternion rot, float destroyDelay)
+    public void spawnVFX(GameObject prefab, Vector3 pos, Quaternion rot, Transform parent, float destroyDelay)
     {
-        GameObject newVFX = Instantiate(prefab, pos, rot);
+        GameObject newVFX = Instantiate(prefab, pos, rot, parent);
         Destroy(newVFX, destroyDelay);
     }
 }
