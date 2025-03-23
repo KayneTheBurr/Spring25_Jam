@@ -10,7 +10,7 @@ public class PlayerCombatManager : MonoBehaviour
     public bool isChargingAttack = false;
 
     [Header("Attack Values")]
-    public float attackRadius = 5f;
+    public float attackRadius = 1f;
     public float attackRange = 5f;
     public float vfxOffest = 2f;
     public float slamExtraOffset = 2f;
@@ -50,12 +50,13 @@ public class PlayerCombatManager : MonoBehaviour
     {
         FacingDirection direction = player.GetPointerDirection();
         float damageDone = 0;
+        attackRange = 5f;
+        
 
         if (attackAnim == heavy_Attack_Back_01 || attackAnim == heavy_Attack_Front_01)
         {
             HandleHeavyAttackDamage();
             return;
-
         }
 
         //determnine the damage of the hit based on the attackAnim string passed in 
@@ -70,6 +71,7 @@ public class PlayerCombatManager : MonoBehaviour
         else if (attackAnim == light_Attack_Back_03 || attackAnim == light_Attack_Front_03)
         {
             damageDone = lightAttack03_Damage;
+            attackRange = 7f;
         }
         else
         {
@@ -88,7 +90,7 @@ public class PlayerCombatManager : MonoBehaviour
         {
             if(hit.transform.GetComponent<Enemy>() != null)
             {
-                hitAtLeastOne = true; return;
+                hitAtLeastOne = true; break;
             }
         }
 
@@ -102,10 +104,13 @@ public class PlayerCombatManager : MonoBehaviour
                 healthLogic.TakeDMG(damageDone);
             }
         }
+
         //spawn a vfx prefab that direction using the Particle Manager 
         if (attackAnim == light_Attack_Back_01 || attackAnim == light_Attack_Front_01
             || attackAnim == light_Attack_Back_02 || attackAnim == light_Attack_Front_02)
         {
+            Debug.Log("Spawn vfx");
+
             ParticleManager.instance.spawnParticles(ParticleManager.instance.particles[4],
             pointerDirection.position + directionToAttack * vfxOffest, Quaternion.LookRotation(directionToAttack), player.transform);
         }
