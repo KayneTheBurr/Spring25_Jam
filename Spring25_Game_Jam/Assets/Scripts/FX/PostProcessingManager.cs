@@ -3,6 +3,8 @@ using Unity.Collections;
 using System.Collections.Generic;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using System.Collections;
+using UnityEngine.UI;
 
 public class PostProcessingManager : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class PostProcessingManager : MonoBehaviour
     //  kiki    [1]
 
     private Volume globalVolume;
+    public GameObject flash;
 
     private void Awake()
     {
@@ -36,19 +39,21 @@ public class PostProcessingManager : MonoBehaviour
 
     public void kikiToBouba()
     {
-        //kiki variables
-        DepthOfField dof;
-        profiles[1].TryGet<DepthOfField>(out dof);
-
-        //bouba variables
+        StartCoroutine(screenFlash(Color.white, 0.1f));
+        globalVolume.profile = profiles[0];
     }
 
     public void boubaToKiki()
     {
-        //bouba variables
-        DepthOfField dof;
-        profiles[0].TryGet<DepthOfField>(out dof);
+        StartCoroutine(screenFlash(Color.red, 0.1f));
+        globalVolume.profile = profiles[1];
+    }
 
-        //kiki variables
+    public IEnumerator screenFlash(Color flashColor, float flashDuration)
+    {
+        flash.GetComponent<Image>().color = flashColor;
+        flash.SetActive(true);
+        yield return new WaitForSeconds(flashDuration);
+        flash.SetActive(false);
     }
 }
