@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
     private Transform playerTransform;
     public float dmgFromHitbox = 5f;
     private Transform spriteObj;
-    private Animator spriteAnim;
+    public Animator spriteAnim;
 
     [Header("Idle State")]
     public float maxIdleTime;
@@ -46,13 +46,16 @@ public class Enemy : MonoBehaviour
     public float minDistanceToTarget = 0.1f;
 
     [Header("Runaway State")]
-    
+
 
     [Header("Follow State")]
-    
+
+    [Header("Charge Up State")]
+    public float secondsToChargeUp;
 
     [Header("Attack State")]
     public float minAttackDistance;
+    public float secondsToAttack;
 
     private void Awake()
     {
@@ -196,6 +199,7 @@ public class Enemy : MonoBehaviour
             case EnemyStates.FOLLOW:
                 break;
             case EnemyStates.CHARGEUP:
+                SetChargeUpState();
                 break;
             case EnemyStates.ATTACK:
                 SetAttackState();
@@ -349,16 +353,21 @@ public class Enemy : MonoBehaviour
 
     public void ChargeUpUpdate()
     {
-        agent.SetDestination(transform.position);
-        // charge up animation
+        
+    }
 
-        //temp
-        EndChargeUpState();
+    public virtual void SetChargeUpState()
+    {
+        StartCoroutine(EndChargeUpState());
     }
 
     // called from charge up animation
-    public void EndChargeUpState()
+    IEnumerator EndChargeUpState()
     {
+        agent.SetDestination(transform.position);
+
+        yield return new WaitForSeconds(secondsToChargeUp);
+
         SetState(EnemyStates.ATTACK);
     }
 
@@ -369,15 +378,14 @@ public class Enemy : MonoBehaviour
 
     public virtual void SetAttackState()
     {
-        // attack animation
-
-        //temp
-        EndAttackState();
+        StartCoroutine(EndAttackState());
     }
 
     // called from attack animation
-    public void EndAttackState()
+    IEnumerator EndAttackState()
     {
+        yield return new WaitForSeconds(secondsToAttack);
+
         SetState(EnemyStates.IDLE);
     }
 
@@ -389,6 +397,12 @@ public class Enemy : MonoBehaviour
     {
         float distance = Vector3.Distance(playerTransform.position, this.transform.position);
         return distance;
+    }
+
+    public void DestroyEnemy()
+    {
+        OnDisable();
+        Destroy(gameObject);
     }
 
     #endregion
