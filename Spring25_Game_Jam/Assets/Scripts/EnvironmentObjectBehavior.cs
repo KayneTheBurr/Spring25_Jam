@@ -19,11 +19,13 @@ public class EnvironmentObjectBehavior : MonoBehaviour
     public void OnEnable()
     {
         WorldGameState.worldStateChanged += ChangeSprite;
+        SceneChangeHandler.onSceneChange += OnDisable;
     }
 
     public void OnDisable()
     {
         WorldGameState.worldStateChanged -= ChangeSprite;
+        SceneChangeHandler.onSceneChange -= OnDisable;
     }
 
     public void ChangeSprite()
