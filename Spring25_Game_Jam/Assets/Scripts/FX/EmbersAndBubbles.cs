@@ -5,12 +5,6 @@ public class EmbersAndBubbles : MonoBehaviour
     public ParticleSystem embers;
     public ParticleSystem bubbles;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         //kiki
