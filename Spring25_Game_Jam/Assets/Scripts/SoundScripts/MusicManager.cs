@@ -41,11 +41,13 @@ public class MusicManager : MonoBehaviour
     {
         if (endLoop != null)
         {
-            audioSource.PlayOneShot(endLoop);
+            audioSource.loop = true;
+            audioSource.clip = endLoop;
+            audioSource.Play();
         }
         else
         {
-            Debug.LogWarning("endLoop AudioClip is not assigned in ESFXManager!");
+            Debug.LogWarning("endLoop AudioClip is not assigned in MusicManager!");
         }
     }
 
@@ -53,13 +55,16 @@ public class MusicManager : MonoBehaviour
     {
         if (kikiLoop != null)
         {
-            audioSource.PlayOneShot(kikiLoop);
+            audioSource.loop = true;
+            audioSource.clip = kikiLoop;
+            audioSource.Play();
         }
         else
         {
-            Debug.LogWarning("kikiLoop AudioClip is not assigned in ESFXManager!");
+            Debug.LogWarning("kikiLoop AudioClip is not assigned in MusicManager!");
         }
     }
+
 
     public void PlayMenuKiki()
     {
