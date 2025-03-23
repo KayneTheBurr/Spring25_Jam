@@ -8,21 +8,67 @@ public class PlayerCombatManager : MonoBehaviour
 
     public bool isChargingAttack = false;
 
+    [Header("Attack Damage Values")]
+    public float lightAttack01_Damage;
+    public float lightAttack02_Damage;
+    public float lightAttack03_Damage;
+    public float heavyAttack_01_Damage;
+
+    [Header("Front Light Attacks")]
     [SerializeField] string light_Attack_Front_01 = "Front_Light_Attack_01";
     [SerializeField] string light_Attack_Front_02 = "Front_Light_Attack_02";
     [SerializeField] string light_Attack_Front_03 = "Front_Light_Attack_03";
 
+    [Header("Front Heavy Attacks")]
     [SerializeField] string heavy_Attack_Front_01 = "Front_Heavy_Attack_01";
 
+    [Header("Back Light Attacks")]
     [SerializeField] string light_Attack_Back_01 = "Back_Light_Attack_01";
     [SerializeField] string light_Attack_Back_02 = "Back_Light_Attack_02";
     [SerializeField] string light_Attack_Back_03 = "Back_Light_Attack_03";
 
+    [Header("Back Heavy Attacks")]
     [SerializeField] string heavy_Attack_Back_01 = "Back_Heavy_Attack_01";
 
     private void Awake()
     {
         player = GetComponent<PlayerManager>();
+    }
+    private void DealDamage(string attackAnim)
+    {
+        FacingDirection direction = player.GetPointerDirection();
+        float damageDone = 0;
+
+        //determnine the damage of the hit based on the attackAnim string passed in 
+        if(attackAnim == light_Attack_Back_01 || attackAnim == light_Attack_Front_01)
+        {
+            damageDone = lightAttack01_Damage;
+        }
+        else if(attackAnim == light_Attack_Back_02 || attackAnim == light_Attack_Front_02)
+        {
+            damageDone = lightAttack02_Damage;
+        }
+        else if(attackAnim == light_Attack_Back_03 || attackAnim == light_Attack_Front_03)
+        {
+            damageDone = lightAttack03_Damage;
+        }
+        else if(attackAnim == heavy_Attack_Back_01 || attackAnim == heavy_Attack_Front_01)
+        {
+            damageDone = heavyAttack_01_Damage;
+        }
+        else
+        {
+            damageDone = lightAttack01_Damage;
+        }
+
+        //use the facing direction to detect for enemies in that direction
+
+        //spawn a vfx prefab that direction using the Particle Manager 
+
+        //Play a sfx depending on what attack was used
+
+
+
     }
     private void Update()
     {
@@ -34,8 +80,7 @@ public class PlayerCombatManager : MonoBehaviour
         //cant attack in kiki mode 
         //if (WorldGameState.GetWorldState() == DrugState.Kikki) return;
         bool facingFront = true;
-        string animationToPlay = "";
-
+        
         switch (player.playerAnimationManager.myDirection)
         {
             case FacingDirection.Front:
@@ -60,26 +105,31 @@ public class PlayerCombatManager : MonoBehaviour
             {
                 canCombo = false;
 
-                if (player.playerAnimationManager.lastAnimation == light_Attack_Front_01)
+                if (player.playerAnimationManager.lastAnimation == light_Attack_Back_01 || player.playerAnimationManager.lastAnimation == light_Attack_Front_01)
                 {
-                    Debug.Log("Play second attack here");
+                    Debug.Log("Play second attack front here");
                     player.playerAnimationManager.PlayTargetAnimation(light_Attack_Front_02, true);
+                    DealDamage(light_Attack_Front_02);
                 }
-                else if (player.playerAnimationManager.lastAnimation == light_Attack_Front_02)
+                else if (player.playerAnimationManager.lastAnimation == light_Attack_Back_02 || player.playerAnimationManager.lastAnimation == light_Attack_Front_02)
                 {
-                    Debug.Log("Play third attack here");
+                    Debug.Log("Play third attack front here");
                     player.playerAnimationManager.PlayTargetAnimation(light_Attack_Front_03, true);
+                    DealDamage(light_Attack_Front_03);
                 }
-                else if (player.playerAnimationManager.lastAnimation == light_Attack_Front_03)
+                else if (player.playerAnimationManager.lastAnimation == light_Attack_Back_03 || player.playerAnimationManager.lastAnimation == light_Attack_Front_03)
                 {
-                    Debug.Log("Play first attack here");
+                    Debug.Log("Play first attack front here");
                     player.playerAnimationManager.PlayTargetAnimation(light_Attack_Front_01, true);
+                    DealDamage(light_Attack_Front_01);
                 }
             }
             else if (!player.isPerformingAction)
             {
-                Debug.Log("Play first attack here");
+                Debug.Log("Start attack chain front ");
                 player.playerAnimationManager.PlayTargetAnimation(light_Attack_Front_01, true);
+                DealDamage(light_Attack_Front_01);
+
             }
             player.isPerformingAction = true;
         }
@@ -90,26 +140,34 @@ public class PlayerCombatManager : MonoBehaviour
             {
                 canCombo = false;
 
-                if (player.playerAnimationManager.lastAnimation == light_Attack_Front_01)
+                if (player.playerAnimationManager.lastAnimation == light_Attack_Back_01 || player.playerAnimationManager.lastAnimation == light_Attack_Front_01)
                 {
-                    Debug.Log("Play second attack here");
-                    player.playerAnimationManager.PlayTargetAnimation(light_Attack_Front_02, true);
+                    Debug.Log("Play second attack back here");
+                    player.playerAnimationManager.PlayTargetAnimation(light_Attack_Back_02, true);
+                    DealDamage(light_Attack_Back_02);
+
                 }
-                else if (player.playerAnimationManager.lastAnimation == light_Attack_Front_02)
+                else if (player.playerAnimationManager.lastAnimation == light_Attack_Back_02 || player.playerAnimationManager.lastAnimation == light_Attack_Front_02)
                 {
-                    Debug.Log("Play third attack here");
-                    player.playerAnimationManager.PlayTargetAnimation(light_Attack_Front_03, true);
+                    Debug.Log("Play third attack back here");
+                    player.playerAnimationManager.PlayTargetAnimation(light_Attack_Back_03, true);
+                    DealDamage(light_Attack_Back_03);
+
                 }
-                else if (player.playerAnimationManager.lastAnimation == light_Attack_Front_03)
+                else if (player.playerAnimationManager.lastAnimation == light_Attack_Back_03 || player.playerAnimationManager.lastAnimation == light_Attack_Front_03)
                 {
-                    Debug.Log("Play first attack here");
-                    player.playerAnimationManager.PlayTargetAnimation(light_Attack_Front_01, true);
+                    Debug.Log("Play first attack back here");
+                    player.playerAnimationManager.PlayTargetAnimation(light_Attack_Back_01, true);
+                    DealDamage(light_Attack_Back_01);
+
                 }
             }
             else if (!player.isPerformingAction)
             {
-                Debug.Log("Play first attack here");
-                player.playerAnimationManager.PlayTargetAnimation(light_Attack_Front_01, true);
+                Debug.Log("Start attack chain back");
+                player.playerAnimationManager.PlayTargetAnimation(light_Attack_Back_01, true);
+                DealDamage(light_Attack_Back_01);
+
             }
             player.isPerformingAction = true;
         }
@@ -128,15 +186,46 @@ public class PlayerCombatManager : MonoBehaviour
     }
     public void PerformHeavyAttack()
     {
-        if (!player.isPerformingAction)
+        bool facingFront = true;
+        
+        switch (player.playerAnimationManager.myDirection)
         {
-            Debug.Log("Play heavy attack");
-            player.playerAnimationManager.PlayTargetAnimation(heavy_Attack_Front_01, true);
+            case FacingDirection.Front:
+            case FacingDirection.Left:
+            case FacingDirection.Right:
+            case FacingDirection.FrontLeft:
+            case FacingDirection.FrontRight:
+                facingFront = true;
+                break;
+
+            case FacingDirection.Back:
+            case FacingDirection.BackLeft:
+            case FacingDirection.BackRight:
+                facingFront = false;
+                break;
+        }
+        if (facingFront)
+        {
+            if (!player.isPerformingAction)
+            {
+                Debug.Log("Play heavy attack front");
+                player.playerAnimationManager.PlayTargetAnimation(heavy_Attack_Front_01, true);
+                DealDamage(heavy_Attack_Front_01);
+            }
+        }
+        else if (!facingFront)
+        {
+            if (!player.isPerformingAction)
+            {
+                Debug.Log("Play heavy attack back");
+                player.playerAnimationManager.PlayTargetAnimation(heavy_Attack_Back_01, true);
+                DealDamage(heavy_Attack_Back_01);
+            }
         }
     }
     public void EnableCanCombo()
     {
-        Debug.Log("Enable can combo");
+        //Debug.Log("Enable can combo");
         canCombo = true;
     }
     public void DisableCanCombo()
