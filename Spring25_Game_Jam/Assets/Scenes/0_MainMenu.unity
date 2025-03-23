@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: 328778317}
   - component: {fileID: 328778319}
   - component: {fileID: 328778318}
+  - component: {fileID: 328778320}
   m_Layer: 5
   m_Name: MaineMenuKikiImage (1)
   m_TagString: Untagged
@@ -409,6 +410,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328778316}
   m_CullTransparentMesh: 1
+--- !u!114 &328778320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328778316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc48bbe2204c374f803cdb1457101e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &388950518
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +554,7 @@ GameObject:
   - component: {fileID: 782410456}
   - component: {fileID: 782410458}
   - component: {fileID: 782410457}
+  - component: {fileID: 782410459}
   m_Layer: 5
   m_Name: MaineMenuImage
   m_TagString: Untagged
@@ -605,6 +619,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 782410455}
   m_CullTransparentMesh: 1
+--- !u!114 &782410459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782410455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a196abfc98f0a29419fa3b200d6cf055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &834321261
 GameObject:
   m_ObjectHideFlags: 0
