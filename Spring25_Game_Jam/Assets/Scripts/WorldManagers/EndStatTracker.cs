@@ -7,7 +7,7 @@ public class EndStatTracker : MonoBehaviour
     public static EndStatTracker instance;
 
     [SerializeField] private int enemiesKilled = 0;
-    [SerializeField] private float playerHealAmount = 2f;
+    [SerializeField] private float playerHealAmount = 3f;
     public Button mainMenuButton;
     public TextMeshProUGUI killCountText;
     public Canvas endCanvas;

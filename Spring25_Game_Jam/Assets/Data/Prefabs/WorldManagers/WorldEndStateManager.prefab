@@ -45,4 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesKilled: 0
-  playerHealAmount: 2
+  playerHealAmount: 3
+  mainMenuButton: {fileID: 0}
+  killCountText: {fileID: 0}
+  endCanvas: {fileID: 7633899772460871601, guid: 3930c1a107283384f8129d2c0a6fd735, type: 3}

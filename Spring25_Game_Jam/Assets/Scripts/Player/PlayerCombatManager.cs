@@ -9,11 +9,18 @@ public class PlayerCombatManager : MonoBehaviour
     public bool canCombo = false;
     public bool isChargingAttack = false;
 
+    [Header("Screen Shake Values")]
+    public float hitShakeAmp = 2.0f;
+    public float hitShakeFreq = 0.1f;
+    public float slamShakeAmp = 3f;
+    public float slamShakeFreq = 0.15f;
+
     [Header("Attack Values")]
     public float attackRadius = 1f;
     public float attackRange = 5f;
     public float vfxOffest = 2f;
     public float slamExtraOffset = 2f;
+    public float finalSlamRadius = 2f;
     public float slamDelayTime = 2;
     public float spinDamageRadius = 3f;
     public LayerMask enemyLayer;
@@ -49,6 +56,10 @@ public class PlayerCombatManager : MonoBehaviour
     }
     public void TakeDamage()
     {
+        Debug.Log("take damage");
+
+        ScreenShake.instance.shakeCam(hitShakeAmp, hitShakeFreq);
+        
         if (WorldGameState.instance.GetWorldState() == DrugState.Kikki)
         {
             ParticleManager.instance.spawnParticles(ParticleManager.instance.particles[2],
@@ -56,6 +67,7 @@ public class PlayerCombatManager : MonoBehaviour
         }
         else if (WorldGameState.instance.GetWorldState() == DrugState.Bouba)
         {
+            Debug.Log("Confetti Damage");
             ParticleManager.instance.spawnParticles(ParticleManager.instance.particles[1],
                 transform.position, Quaternion.identity, player.transform);
         }
@@ -84,7 +96,7 @@ public class PlayerCombatManager : MonoBehaviour
         }
         else if (attackAnim == light_Attack_Back_03 || attackAnim == light_Attack_Front_03)
         {
-            damageDone = lightAttack03_Damage;
+            damageDone = 0; // lightAttack03_Damage;
             attackRange = 7f;
         }
         else
@@ -140,10 +152,23 @@ public class PlayerCombatManager : MonoBehaviour
     {
         yield return new WaitForSeconds(slamDelayTime);
 
-        ScreenShake.instance.shakeCam(2, .1f);
+        ScreenShake.instance.shakeCam(slamShakeAmp, slamShakeFreq);
 
         ParticleManager.instance.spawnParticles(ParticleManager.instance.particles[6],
             pointerDirection.position + directionToAttack * (vfxOffest + slamExtraOffset), Quaternion.LookRotation(directionToAttack), player.transform);
+
+
+        Collider[] hitEnemies = Physics.OverlapSphere(pointerDirection.position + directionToAttack * (vfxOffest + slamExtraOffset), finalSlamRadius, enemyLayer);
+
+        foreach (var enemy in hitEnemies)
+        {
+
+            if (enemy.GetComponent<Enemy>() != null)
+            {
+
+                enemy.GetComponent<HealthBehavior>().TakeDMG(lightAttack03_Damage);
+            }
+        }
     }
     private void HandleHeavyAttackDamage()
     {

@@ -497,7 +497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canCombo: 0
   isChargingAttack: 0
-  attackRadius: 1.5
+  attackRadius: 1.6
   attackRange: 5
   vfxOffest: 1.75
   slamExtraOffset: 2
@@ -509,7 +509,7 @@ MonoBehaviour:
   lightAttack01_Damage: 5
   lightAttack02_Damage: 10
   lightAttack03_Damage: 20
-  heavyAttack_01_Damage: 10
+  heavyAttack_01_Damage: 5
   light_Attack_Front_01: Front_Light_Attack_01
   light_Attack_Front_02: Front_Light_Attack_02
   light_Attack_Front_03: Front_Light_Attack_03

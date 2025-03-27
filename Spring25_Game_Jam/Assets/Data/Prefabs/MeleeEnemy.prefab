@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15293c839e9b602429f5e6160816f035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 10
+  maxHealthPoints: 20
   currentHealthPoints: 10
 --- !u!195 &485835314927025619
 NavMeshAgent:
@@ -111,7 +111,7 @@ MonoBehaviour:
   enemyState: 0
   speed: 5
   damage: 0
-  dmgFromHitbox: 1
+  dmgFromHitbox: 3
   spriteAnim: {fileID: 0}
   maxIdleTime: 6
   minIdleTime: 4

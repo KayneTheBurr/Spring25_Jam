@@ -61,7 +61,6 @@ public class EnvironmentObjectBehavior : MonoBehaviour
                 sp.sprite = kikiSprite;
             }
             
-
             if (anim != null)
             {
                 anim.SetBool("isBouba", false);

@@ -29,7 +29,9 @@ public class ScreenShake : MonoBehaviour
 
     public void shakeCam(float intensity, float duration)
     {
+        Debug.Log(1);
         CinemachineBasicMultiChannelPerlin perlin = cam.GetComponent<CinemachineBasicMultiChannelPerlin>();
+        Debug.Log(1);
         perlin.AmplitudeGain = intensity;
         shakeTimer = duration;
     }
@@ -38,6 +40,7 @@ public class ScreenShake : MonoBehaviour
     {
         if (shakeTimer > 0f)
         {
+            Debug.Log("Countdown Shake Timer");
             shakeTimer -= Time.deltaTime;
             if (shakeTimer <= 0f)
             {
